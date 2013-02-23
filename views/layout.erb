@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<!--[if IE 8]>         <html class="lt-ie9">  <![endif]-->
+<!--[if gt IE 8]><!--> <html class="gt-ie9">  <!--<![endif]-->
+
+  <head>
+    <link href="/css/styles.css" rel="stylesheet">
+    <title>mmwtsn » <%= @page %></title>
+    <meta charset="utf8">
+  <head>
+
+  <body>
+
+    <header>
+      <nav>
+        <ul>
+          <h1>mmwtsn</h1>
+          <li><a href="/about">about</a></li>
+          <li><a href="/musings">musings</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p>&copy; m. maxwell watson 2012-2013</p>
+    </footer>
+
+    <aside>
+      <a class="social icon_twitter" href="http://twitter.com/mmwtsn"></a>
+      <a class="social icon_github" href="https://github.com/mmwtsn"></a>
+    </aside>
+    
+  </body>
+
+</html>
