@@ -1,15 +1,7 @@
 @import 'compass/css3'
 @import 'reset'
+@import 'variables'
 @import 'typography'
-
-// variables
-$pageBg: #F8F6EC
-$wrapperColor: #F0F0F0
-$border: 1px solid #eee
-$anchorColor: #222
-$hoverColor: #322e2e
-$copyDark: #131112
-$copyLight: #888
 
 // mixins
 @mixin overflow_100
@@ -96,11 +88,6 @@ aside
   background-position-y: -8px
   background-position-x: -132px
 
-footer
-  p
-    text-align: left
-    color: $copyLight
-
 li
   list-style: none
 
@@ -113,15 +100,6 @@ a
   width: 600px
   margin: 0 0 0 23%
 
-footer
-  @media only screen and (max-width: 900px)
-    width: 100%
-    margin: 0
-
-.work
-  margin: 0 0 0 13%
-  width: 87%
-
 // ---------- ARTICLE
 .article
   @media only screen and (max-width: 900px)
@@ -131,8 +109,6 @@ footer
     max-width: 90%
 
 // ---------- ARTICLES
-.articles
-  display: block
 
 // ---------- WORK
 .work
@@ -153,5 +129,17 @@ footer
     margin: 0 auto
 
 // ---------- ABOUT
-.about
-  display: block
+
+// ---------- WORK
+.work
+  margin: 0 0 0 13%
+  width: 87%
+
+// ---------- FOOTER
+footer
+  p
+    text-align: left
+    color: $copyLight
+  @media only screen and (max-width: 900px)
+    width: 100%
+    margin: 0
