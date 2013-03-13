@@ -1,7 +1,15 @@
 require 'sinatra'
+require 'rdiscount'
+
+# for all markdown files, use FIXME.erb as layout
+set :markdown, :layout_engine => :erb, :layout => :layout
 
 get "/" do
   erb :work
+end
+
+get "/readme" do
+  markdown :readme
 end
 
 get "/*/?" do
