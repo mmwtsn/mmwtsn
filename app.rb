@@ -25,3 +25,4 @@ end
 error do
   erb 500.to_s.to_sym
 end
+
