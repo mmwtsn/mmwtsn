@@ -6,26 +6,33 @@
     <link href="/css/styles.css" rel="stylesheet">
     <title>mmwtsn » <%= @page %></title>
     <meta charset="utf8">
+<!--
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+-->
+
+    <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
   <head>
 
   <body>
 
     <header>
-      <nav>
-        <ul>
-          <h1>mmwtsn</h1>
+      <ul>
+        <li id="menu"><span>+</span></li>
+        <nav id="nav">
+          <li><h1>mmwtsn</h1></li>
           <li><a href="/about">about</a></li>
           <li><a href="/musings">musings</a></li>
-        </ul>
-      </nav>
+        </nav>
+      </ul>
     </header>
 
-    <%= yield %>
+    <article class="container">
+      <%= yield %>
+    </article>
 
     <footer>
-      <p>&copy; m. maxwell watson 2012-2013</p>
+      <p>&copy; m. maxwell watson 2013</p>
     </footer>
 
     <aside>
