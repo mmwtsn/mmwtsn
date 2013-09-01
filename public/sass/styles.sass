@@ -3,7 +3,7 @@
 @import 'variables'
 @import 'typography'
 
-// mixins
+// MIXINS
 @mixin overflow_100
   overflow: hidden
   width: 100%
@@ -38,9 +38,15 @@ code
 // HEADER
 // ------
 header
-  width: 21.8em
-  margin: 0 auto 2em
+  height: 500px
   overflow: hidden
+  position: fixed
+  background: #FFFF71
+  display: block
+  width: 27%
+  padding: 0 36.5%
+  z-index: -2
+  top: 0
 
 .logotype
   text-indent: 0.6rem
@@ -135,21 +141,27 @@ a
 
 // ---------- WORK
 .work
-  &:before
-    border-top: 50px solid #000
-    border-left: transparent
-    border-right: 50px solid #000
-    border-bottom: transparent
+  background: $bg-work
+  margin: 350px 0 0 0
+  padding: 50px
+  .edge
+    width: 0
+    height: 0
+    border-left: 1425px solid transparent
+    border-right: 0 solid transparent
+    border-bottom: 66px solid $bg-work
+    font-size: 0
+    line-height: 0
     display: block
-    content: ""
-    width: 50px
-    height: 50px
+    position: relative
+    top: -115px
+    left: -50px
+    z-index: 2
   div
-    float: left
     width: 42%
     margin: 1.75% 2%
     padding: 2%
-    background: rgba(255,255,255,0.1)
+    background: rgba(255, 255, 255, 0.1)
   @media only screen and (max-width: 1200px)
     width: 600px
     margin: 0 0 0 23%
@@ -163,12 +175,15 @@ a
 
 // ---------- FOOTER
 footer
-  margin: 0 auto
-  width: 35em
+  background: $bg-accent
   @media only screen and (max-width: 900px)
     width: 100%
     margin: 0
   p
     text-align: left
+    font-weight: 500
+    font-size: 14px
+    padding: 1em
+    text-transform: uppercase
     color: $logotype-opaque
     color: $logotype-transparent
