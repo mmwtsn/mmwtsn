@@ -6,40 +6,53 @@
     <link href="/css/styles.css" rel="stylesheet">
     <title>mmwtsn » <%= @page %></title>
     <meta charset="utf8">
-<!--
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7853452/754242/css/fonts.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
--->
-
-    <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
   <head>
 
   <body>
 
+  <%#
+
+    header
+        logotype
+        description
+        nav
+
+      article (container)
+        title
+        date
+        content
+
+  %>
     <header>
+      <!-- <img src="/images/logotype.png"> -->
+      <!--<a href="/"><h1 class="logotype">m<span class="abbreviated">mwtsn</span><span class="full">. maxwell watson</span></h1></a>-->
+      <a href="/"><h1 class="logotype">mmwtsn</h1></a>
       <ul>
-        <li id="menu"><span>+</span></li>
         <nav id="nav">
-          <li><h1>mmwtsn</h1></li>
+          <li><a href="/words">words</a></li>
+          <li><a href="/work">work</a></li>
           <li><a href="/about">about</a></li>
-          <li><a href="/musings">musings</a></li>
         </nav>
       </ul>
     </header>
 
-    <article class="container">
+    <section class="<%= @class  %>">
       <%= yield %>
-    </article>
+    </section>
 
     <footer>
       <p>&copy; m. maxwell watson 2013</p>
     </footer>
 
+    <%#
     <aside>
       <a class="social icon_twitter" href="http://twitter.com/mmwtsn"></a>
       <a class="social icon_github" href="https://github.com/mmwtsn"></a>
     </aside>
-    
+    %>
   </body>
 
 </html>
