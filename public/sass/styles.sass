@@ -90,7 +90,7 @@ nav
     &:hover
       color: rgba(255,255,255,0.7)
       color: #333
-      border-bottom: dotted 2px #ddd
+      border-bottom: dotted 2px #333
       transition: ease color 0.5s
 
 aside
@@ -144,12 +144,18 @@ a
   background: $bg-work
   margin: 350px 0 0 0
   padding: 50px
-  .edge
+  #edge
     width: 0
     height: 0
-    border-left: 1425px solid transparent
-    border-right: 0 solid transparent
-    border-bottom: 66px solid $bg-work
+    border-left-width: 10px
+    border-left-color: transparent
+    border-left-style: solid
+    border-right-color: transparent
+    border-right-style: solid
+    border-right-width: 0
+    border-bottom-color: $bg-work
+    border-bottom-style: solid
+    border-bottom-width: 66px
     font-size: 0
     line-height: 0
     display: block
