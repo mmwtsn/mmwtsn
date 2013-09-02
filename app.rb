@@ -15,9 +15,9 @@ get "/?" do
   redirect '/musings'
 end
 
-get "/musings/?" do
-  @class = 'musings'
-  erb :musings
+get "/words/?" do
+  @class = 'articles'
+  erb :words
 end
 
 get "/about/?" do
