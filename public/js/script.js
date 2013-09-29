@@ -30,7 +30,7 @@ $(document).ready(function() {
     var $article = $('.article');
 
     var start = {'left':'18.5rem'};
-    var end   = {'left':'1rem'};
+    var end   = {'left':'24px'};
     var width = {'width':'toggle'};
     var zero  = {'left':'0'};
 
