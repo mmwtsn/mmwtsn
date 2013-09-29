@@ -49,7 +49,7 @@ code
   line-height: 200px
   width: 200px
   color: #fff
-  background: #222
+  background: #2f2f2f
 
 .social
   width: 29px
@@ -117,21 +117,28 @@ a
 // ------------ GENERAL (new)
 #toggle-nav
   position: absolute
-  top: 2rem
-  left: 1rem
-  line-height: 1.6rem
-  font-size: 2rem
-  color: #444
+  top: 32px
+  left: 24px
+  line-height: 24px
+  font-size: 32px
+  color: #2f2f2f
   z-index: 3
 
 // NAV (aside)
 nav
   display: none
-  padding: 2rem
+  margin: 16px
+  padding: 16px
+  border: 8px solid #2f2f2f
+  a
+    font-weight: 400
+    color: #2f2f2f
+    &:hover
+      color: #fff
+      +transition(color ease-out 0.5s)
 
 aside
   position: fixed
   top: 0
   left: -1px
   height: 100%
-  background: #fff
