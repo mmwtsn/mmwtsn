@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!doctype html>
 <!--[if IE 8]>         <html class="lt-ie9">  <![endif]-->
 <!--[if gt IE 8]><!--> <html class="gt-ie9">  <!--<![endif]-->
 
@@ -12,48 +12,33 @@
   <head>
 
   <body>
+    <aside>
+      <a id="toggle-nav" href="#">&#9776;</a>
 
-  <%#
-
-    header
-        logotype
-        description
-        nav
-
-      article (container)
-        title
-        date
-        content
-
-  %>
-    <header>
-      <!-- <img src="/images/logotype.png"> -->
-      <!--<a href="/"><h1 class="logotype">m<span class="abbreviated">mwtsn</span><span class="full">. maxwell watson</span></h1></a>-->
-      <a href="/"><h1 class="logotype">mmwtsn</h1></a>
-      <nav id="nav">
+      <nav role="navigation">
         <ul>
+          <li class="logotype-wrapper"><a href="/" class="logotype">mmwtsn</a></li>
           <li><a href="/words">words</a></li>
           <li><a href="/work">work</a></li>
           <li><a href="/about">about</a></li>
         </ul>
       </nav>
-    </header>
+
+      <!--
+      <a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a>
+      <a class="social icon-github" href="https://github.com/mmwtsn"></a>
+      <a class="social icon-linkedin" href="https://linkedin.com/in/mmwtsn"></a>
+      -->
+    </aside>
 
     <section class="<%= @class %> wrapper">
-      <hr id="edge">
       <%= yield %>
     </section>
 
+    <!--
     <footer>
       <p>&copy; m. maxwell watson 2013</p>
     </footer>
-
-    <%#
-    <aside>
-      <a class="social icon_twitter" href="http://twitter.com/mmwtsn"></a>
-      <a class="social icon_github" href="https://github.com/mmwtsn"></a>
-    </aside>
-    %>
+    -->
   </body>
-
 </html>
