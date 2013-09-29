@@ -20,6 +20,7 @@ body
   font-size: 16px
   font-weight: 600
   color: $copy
+  overflow-x: hidden
   @media only screen and (max-width: 900px)
     padding: 2% 10%
   @media only screen and (max-width: 900px)
@@ -72,23 +73,22 @@ li
 a
   color: $anchorColor
 
-section.wrapper
-  margin: 360px 0 0 0
-  padding: 50px
-  background: $pageBg
-
 // ---------- ARTICLE
 .article
-  padding: 3rem 3rem 0 3rem
-  background: $article-transparent
-  margin: 0 auto
-  max-width: 35rem
-  width: 98%
+  padding: 3rem 5rem
+  position: relative
   h1
-    font-family: Brannboll
-    font-size: 1.646em
+    font-size: 12.5rem
+    line-height: 12.5rem
+    margin: 2rem 0
   h2
-    font-size: 1.5em
+    font-size: 4.5rem
+    font-style: italic
+    font-weight: 800
+    color: #5b9ff3
+  p
+    max-width: 35rem
+    width: 98%
 
 // ---------- ARTICLES
 
@@ -120,6 +120,7 @@ section.wrapper
   left: 1rem
   line-height: 1.6rem
   font-size: 2rem
+  z-index: 3
 
 // NAV (aside)
 nav
@@ -131,4 +132,5 @@ aside
   top: 0
   left: -1px
   height: 100%
+  background: #fff
   border-right: 2px solid #ddd
