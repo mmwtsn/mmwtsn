@@ -18,14 +18,15 @@ body
   background: $pageBg
   font-family: Gotham, sans-serif
   font-size: 16px
-  font-weight: 200
+  font-weight: 600
   color: $copy
-  span
-    color: #8ba
   @media only screen and (max-width: 900px)
     padding: 2% 10%
   @media only screen and (max-width: 900px)
     padding: 3% 5%
+
+a
+  text-decoration: none
 
 code
   font-family: monospace
@@ -34,69 +35,20 @@ code
   padding: 0.2rem 0.4rem
   border-radius: 2px
 
-// ------
-// HEADER
-// ------
-header
-  height: 360px
-  overflow: hidden
-  position: fixed
-  background: #FFFF71
+.logotype-wrapper
   display: block
-  width: 27%
-  padding: 0 36.5%
-  z-index: -2
-  top: 0
-
+  margin: 0 0 1rem 0
+  
 .logotype
-  text-indent: 0.6rem
+  display: block
+  text-transform: none
+  text-align: center
   font-family: Brannboll
-  color: $logotype-opaque
-  color: $logotype-transparent
-  margin: 1em auto 0
-  font-size: 5.556rem
-  line-height: 1em
-  text-align: center
-  span
-    color: $logotype-opaque
-    color: $logotype-transparent
-  .full
-    display: none
-
-.description
-  display: none
-  font-size: 2.25em
-  text-align: center
-  color: $logotype-transparent
-
-// NAV
-// ---
-nav
-  width: 125%
-  margin: 1rem 0px 0px -12.5%
-  li
-    width: 33.33%
-    float: left
-    text-align: center
-    &:first-child
-      text-align: left
-    &:last-child
-      text-align: right
-  a
-    color: $logotype-opaque
-    color: $logotype-transparent
-    font-size: 1.5rem
-    font-weight: 300
-    text-transform: uppercase
-    padding: 0.5rem 1rem
-
-aside
-  position: fixed
-  bottom: 5%
-  @media only screen and (max-width: 900px)
-    width: 100%
-    margin: 1em 0 4em 0
-    position: static
+  font-size: 2em
+  line-height: 200px
+  width: 200px
+  color: #fff
+  background: #222
 
 .social
   width: 29px
@@ -108,18 +60,22 @@ aside
     float: left
     margin: 0 30px 0 0
 
-.icon_twitter
+.icon-twitter
   background-position: -166px -10px
 
-.icon_github
+.icon-github
   background-position: -132px -10px
 
 li
   list-style: none
 
 a
-  text-decoration: none
   color: $anchorColor
+
+section.wrapper
+  margin: 360px 0 0 0
+  padding: 50px
+  background: $pageBg
 
 // ---------- ARTICLE
 .article
@@ -137,32 +93,6 @@ a
 // ---------- ARTICLES
 
 // ---------- WORK
-#edge
-  width: 0
-  height: 0
-  border-left-width: 10px
-  border-left-color: transparent
-  border-left-style: solid
-  border-right-color: transparent
-  border-right-style: solid
-  border-right-width: 0
-  border-bottom-color: $bg-work
-  border-bottom-style: solid
-  border-bottom-width: 66px
-  border-top: none
-  font-size: 0
-  line-height: 0
-  display: block
-  position: relative
-  top: -115px
-  left: -50px
-  z-index: 2
-
-section.wrapper
-  margin: 360px 0 0 0
-  padding: 50px
-  background: $pageBg
-
 .work
   background: $bg-work
   div
@@ -182,16 +112,23 @@ section.wrapper
 // ---------- ABOUT
 
 // ---------- FOOTER
-footer
-  background: $bg-accent
-  @media only screen and (max-width: 900px)
-    width: 100%
-    margin: 0
-  p
-    text-align: left
-    font-weight: 500
-    font-size: 14px
-    padding: 1em
-    text-transform: uppercase
-    color: $logotype-opaque
-    color: $logotype-transparent
+
+// ------------ GENERAL (new)
+#toggle-nav
+  position: absolute
+  top: 2rem
+  left: 1rem
+  line-height: 1.6rem
+  font-size: 2rem
+
+// NAV (aside)
+nav
+  display: none
+  padding: 2rem
+
+aside
+  position: fixed
+  top: 0
+  left: -1px
+  height: 100%
+  border-right: 2px solid #ddd
