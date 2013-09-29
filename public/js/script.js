@@ -16,7 +16,6 @@ $(document).ready(function() {
 
   var border_width = function() {
     page_width = $(window).width();
-    console.log(page_width);
     $('#edge').css('border-left-width', page_width);
   }
   border_width();
@@ -34,6 +33,8 @@ $(document).ready(function() {
     var width = {'width':'toggle'};
     var zero  = {'left':'0'};
 
+    var animating = false;
+
     // TODO - BUG
     // If the "close" button is pressed immediately after
     // the hover callback function is fired, the is(:hidden)
@@ -44,28 +45,33 @@ $(document).ready(function() {
     // The "open" animation is not smooth. Each element
     // slides in at a different rate.
 
-    $button.click(function() {
-      var $this = $(this);
-      if($nav.is(':hidden')) {
-        $button.animate(start, 250);
-        $nav.animate(width, 250);
-        $article.animate(start, 250);
-      }
-      else {
-        $button.animate(end, 250);
-        $nav.animate(width, 250);
-        $article.animate(zero, 250);
-      };
-    });
+    if(animating == false) {
+      $button.click(function() {
+        var $this = $(this);
+        if($nav.is(':hidden')) {
+          $button.animate(start, 250);
+          $nav.animate(width, 250);
+          $article.animate(start, 250);
+        }
+        else {
+          $button.animate(end, 250);
+          $nav.animate(width, 250);
+          $article.animate(zero, 250);
+        }
+      });
 
-    $nav.hover(function() {
-      // On mouseEnter
-    }, function() {
-      $(this).delay(500).animate(width, 250);
-      $button.delay(500).animate(end, 350);
-      $article.delay(500).animate(zero, 350);
-    });
-  };
+      $nav.hover(function() {
+        // On mouseEnter
+        animating = true;
+      }, function() {
+        $(this).delay(1000).animate(width, 250);
+        $article.delay(1000).animate(zero, 350);
+        $button.delay(1000).animate(end, 350, function() {
+          animating = false;
+        });
+      });
+    }
+  }
   toggleNav();
 
 });
