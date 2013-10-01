@@ -25,11 +25,11 @@ $(document).ready(function() {
 
   var toggleNav = function() {
     var $nav = $('nav'); // This should be the entire sidebar, not just the nav
-    var $button = $('#toggle-nav');
+    var $button = $('#nav-toggle');
     var $article = $('.article');
 
     var start = {'left':'18.5rem'};
-    var end   = {'left':'24px'};
+    var end   = {'left':'16px'};
     var width = {'width':'toggle'};
     var zero  = {'left':'0'};
 
@@ -60,16 +60,16 @@ $(document).ready(function() {
         }
       });
 
-      $nav.hover(function() {
-        // On mouseEnter
-        animating = true;
-      }, function() {
-        $(this).delay(1000).animate(width, 250);
-        $article.delay(1000).animate(zero, 350);
-        $button.delay(1000).animate(end, 350, function() {
-          animating = false;
-        });
-      });
+      //$nav.hover(function() {
+      //  // On mouseEnter
+      //  animating = true;
+      //}, function() {
+      //  $(this).delay(1000).animate(width, 250);
+      //  $article.delay(1000).animate(zero, 350);
+      //  $button.delay(1000).animate(end, 350, function() {
+      //    animating = false;
+      //  });
+      //});
     }
   }
   toggleNav();

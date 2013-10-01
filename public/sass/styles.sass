@@ -3,6 +3,11 @@
 @import 'variables'
 @import 'typography'
 
+// VARIABLES
+$bg-dark: #00000a
+$accent-yellow: #fefe6a
+$accent-blue: #5b9ff3
+
 // MIXINS
 @mixin overflow_100
   overflow: hidden
@@ -19,14 +24,18 @@ body
   font-size: 16px
   font-weight: 200
   color: #fff
-  background: #111113
+  background: $bg-dark
   overflow-x: hidden
   @media only screen and (max-width: 900px)
     padding: 2% 10%
   @media only screen and (max-width: 900px)
     padding: 3% 5%
 
+li
+  list-style: none
+
 a
+  color: $anchorColor
   text-decoration: none
 
 code
@@ -39,7 +48,7 @@ code
 .logotype-wrapper
   display: block
   margin: 0 0 1rem 0
-  
+
 .logotype
   display: block
   text-transform: none
@@ -48,32 +57,38 @@ code
   font-size: 2em
   line-height: 200px
   width: 200px
-  color: #fff
-  background: #2f2f2f
+  color: $bg-dark
+  background: $accent-yellow
+  &:hover
+    color: $bg-dark
+  img
+    height: 1em
 
 .social
-  width: 29px
-  height: 29px
+  background-image: url("/images/social-sprite.png")
+  background-repeat: no-repeat
+  background-size: auto 30px
+  background-color: $accent-yellow
+  width: 30px
+  height: 30px
+  position: relative
   display: block
-  margin: 30px 0 0 0
-  +simple_sprite
-  @media only screen and (max-width: 900px)
-    float: left
-    margin: 0 30px 0 0
-
-.icon-twitter
-  background-position: -166px -10px
 
 .icon-github
-  background-position: -132px -10px
+  background-position: 0 0
+  top: 0
+  left: 0
 
-li
-  list-style: none
+.icon-twitter
+  background-position: -30px 0
+  top: -30px
+  left: 50px
 
-a
-  color: $anchorColor
+.icon-linkedin
+  background-position: -60px 0
+  top: -60px
+  left: 100px
 
-// ---------- ARTICLE
 .article
   padding: 3rem 5rem
   position: relative
@@ -86,7 +101,7 @@ a
     font-size: 4.5rem
     font-style: italic
     font-weight: 800
-    color: #5b9ff3
+    color: $accent-yellow
   p
     max-width: 35rem
     width: 98%
@@ -110,32 +125,31 @@ a
     width: 100%
     margin: 0 auto
 
-// ---------- ABOUT
-
-// ---------- FOOTER
-
-// ------------ GENERAL (new)
-#toggle-nav
+.nav-toggle
   position: absolute
-  top: 32px
-  left: 24px
-  line-height: 24px
-  font-size: 32px
-  color: #2f2f2f
+  top: 16px
+  left: 16px
   z-index: 3
+  line-height: 48px
+  font-size: 32px
+  width: 48px
+  text-align: center
+  color: $accent-yellow
 
-// NAV (aside)
 nav
   display: none
+  height: 245px
   margin: 16px
   padding: 16px
-  border: 8px solid #2f2f2f
+  border: 8px solid $accent-yellow
+  ul
+    overflow: hidden
   a
     font-weight: 400
-    color: #2f2f2f
+    color: $accent-yellow
     &:hover
       color: #fff
-      +transition(color ease-out 0.5s)
+      +transition(color ease 0.5s)
 
 aside
   position: fixed
