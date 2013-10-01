@@ -12,22 +12,7 @@ set :markdown, :layout_engine => :erb, :layout => :layout
 # Static Routes
 get "/?" do
   @class = 'home'
-  redirect '/musings'
-end
-
-get "/words/?" do
-  @class = 'articles'
-  erb :words
-end
-
-get "/about/?" do
-  @class = 'about'
-  erb :about
-end
-
-get "/work/?" do
-  @class = 'work'
-  erb :work
+  redirect '/musings/first'
 end
 
 # Markdown routes

@@ -1,7 +1,5 @@
 <!doctype html>
-<!--[if IE 8]>         <html class="lt-ie9">  <![endif]-->
-<!--[if gt IE 8]><!--> <html class="gt-ie9">  <!--<![endif]-->
-
+<html>
   <head>
     <link href="/css/styles.css" rel="stylesheet">
     <title>mmwtsn » <%= @page %></title>
@@ -13,32 +11,24 @@
 
   <body>
     <aside>
-      <a id="toggle-nav" href="#">&#9776;</a>
+      <a id="nav-toggle" class="nav-toggle" href="#">&#9776;</a>
 
       <nav role="navigation">
         <ul>
-          <li class="logotype-wrapper"><a href="/" class="logotype">mmwtsn</a></li>
-          <li><a href="/words">words</a></li>
-          <li><a href="/work">work</a></li>
-          <li><a href="/about">about</a></li>
+          <li class="logotype-wrapper"><a href="/" class="logotype"><img src="/images/logotype.png" alt="M. Maxwell Watson" /></a></li>
+          <li><a class="social icon-github" href="https://github.com/mmwtsn"></a></li>
+          <li><a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a></li>
+          <li><a class="social icon-linkedin" href="https://linkedin.com/in/mmwtsn"></a></li>
         </ul>
       </nav>
-
-      <!--
-      <a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a>
-      <a class="social icon-github" href="https://github.com/mmwtsn"></a>
-      <a class="social icon-linkedin" href="https://linkedin.com/in/mmwtsn"></a>
-      -->
     </aside>
 
     <section class="<%= @class %> wrapper">
       <%= yield %>
-    </section>
 
-    <!--
-    <footer>
-      <p>&copy; m. maxwell watson 2013</p>
-    </footer>
-    -->
+      <footer>
+        <p>&copy; m. maxwell watson 2013</p>
+      </footer>
+    </section>
   </body>
 </html>
