@@ -7,24 +7,21 @@
 $bg-dark: #00000a
 $accent-yellow: #fefe6a
 $accent-blue: #5b9ff3
+$accent-red: #f25050
+$grey-med: #888
 
 // MIXINS
 @mixin overflow_100
   overflow: hidden
   width: 100%
 
-@mixin simple_sprite
-  background-image: url(/images/simple.png)
-  background-repeat: no-repeat
-  background-size: 200px
-
 // generic element styles
 body
   font-family: Gotham, sans-serif
   font-size: 16px
   font-weight: 200
-  color: #fff
-  background: $bg-dark
+  color: $bg-dark
+  background: #fff
   overflow-x: hidden
   @media only screen and (max-width: 900px)
     padding: 2% 10%
@@ -47,7 +44,7 @@ code
 
 .logotype-wrapper
   display: block
-  margin: 0 0 1rem 0
+  margin: 0 0 0.5rem 0
 
 .logotype
   display: block
@@ -57,36 +54,26 @@ code
   line-height: 200px
   width: 200px
   color: $bg-dark
-  background: $accent-yellow
+  background: #fff
   &:hover
-    color: $bg-dark
+    color: $accent-red
   img
     height: 1em
 
 .social
-  background-image: url("/images/social-sprite.png")
-  background-repeat: no-repeat
-  background-size: auto 30px
-  background-color: $accent-yellow
+  background: url("/images/social-red.png") 0 0 / auto 30px no-repeat #fff
   width: 30px
   height: 30px
-  position: relative
   display: block
 
 .icon-github
   background-position: 0 0
-  top: 0
-  left: 0
 
 .icon-twitter
   background-position: -30px 0
-  top: -30px
-  left: 50px
 
 .icon-linkedin
   background-position: -60px 0
-  top: -60px
-  left: 100px
 
 .article
   padding: 3rem 5rem
@@ -100,7 +87,7 @@ code
     font-size: 4.5rem
     font-style: italic
     font-weight: 800
-    color: $accent-yellow
+    color: $grey-med
   p
     max-width: 35rem
     width: 98%
@@ -133,25 +120,29 @@ code
   font-size: 32px
   width: 48px
   text-align: center
-  color: $accent-yellow
 
 nav
   display: none
-  height: 245px
+  height: 370px
   margin: 16px
   padding: 16px
-  border: 8px solid $accent-yellow
   ul
     overflow: hidden
   a
     font-weight: 400
-    color: $accent-yellow
+    color: #fff
     &:hover
-      color: #fff
-      +transition(color ease 0.5s)
+      opacity: 0.9
+      +transition(opacity ease 0.5s)
+
+  .external
+    display: inline-block
+    margin: 0.5rem 1rem 0 0
 
 aside
   position: fixed
   top: 0
   left: -1px
   height: 100%
+  padding: 0 0 10px 0
+  background: $accent-red
