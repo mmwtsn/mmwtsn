@@ -24,14 +24,17 @@ $(document).ready(function() {
   });
 
   var toggleNav = function() {
-    var $nav = $('nav'); // This should be the entire sidebar, not just the nav
-    var $button = $('#nav-toggle');
+    var $nav     = $('nav'); // This should be the entire sidebar, not just the nav
+    var $button  = $('#nav-toggle');
     var $article = $('.article');
+    var $aside   = $('aside');
 
-    var start = {'left':'18.5rem'};
-    var end   = {'left':'16px'};
+    var start = {'left':'316px'};
+    var end   = {'left':'24px'};
     var width = {'width':'toggle'};
     var zero  = {'left':'0'};
+    var full  = {'width':'300px'};
+    var one   = {'width':'1rem'};
 
     var animating = false;
 
@@ -52,11 +55,13 @@ $(document).ready(function() {
           $button.animate(start, 250);
           $nav.animate(width, 250);
           $article.animate(start, 250);
+          $aside.animate(full, 250);
         }
         else {
           $button.animate(end, 250);
           $nav.animate(width, 250);
           $article.animate(zero, 250);
+          $aside.animate(one, 250);
         }
       });
 
