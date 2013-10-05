@@ -9,14 +9,14 @@ $(document).ready(function() {
     var article = {};
 
     aside.close = {'left':'-250px'};
-    aside.open = {'left':'0px'};
+    aside.open  = {'left':'0px'};
 
     article.close = {'left':'0px'};
-    article.open = {'left':'255px'};
+    article.open  = {'left':'255px'};
 
     var animating = false;
 
-    $button.click(function() {
+    $button.on('click touchstart', function() {
       var asideClosed = $aside.hasClass('closed');
       var $this = $(this);
 
