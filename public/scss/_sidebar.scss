@@ -64,7 +64,38 @@ nav {
 
     &:hover {
       color: $bg-dark;
+      transition: color 0 ease-out 5s;
     }
+  }
+}
+
+.icon-github {
+  background-position: 0 0;
+}
+
+.icon-twitter {
+  background-position: -30px 0;
+}
+
+.icon-linkedin {
+  background-position: -60px 0;
+}
+
+nav {
+  position: relative;
+  height: 370px;
+  margin: 16px;
+  padding: 16px;
+  top: -55px;
+
+  ul {
+    overflow: hidden;
+  }
+
+  a {
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
   }
 
   .external {
@@ -86,6 +117,7 @@ nav {
   display: block;
   border: none;
   background: transparent;
+  cursor: pointer;
 }
 
 aside {
