@@ -65,6 +65,8 @@ code
   width: 30px
   height: 30px
   display: block
+  &:hover
+    background-color: $bg-dark
 
 .icon-github
   background-position: 0 0
@@ -116,23 +118,22 @@ nav
   height: 370px
   margin: 16px
   padding: 16px
-  top: -50px
+  top: -55px
   ul
     overflow: hidden
   a
     font-weight: 400
     color: #fff
     &:hover
-      opacity: 0.9
-      +transition(opacity ease 0.5s)
+      color: $bg-dark
 
   .external
     display: inline-block
-    margin: 0.5rem 1rem 0 0
+    margin: 0.7rem 1rem 0 0
 
 .toggle
   position: relative
-  top: 24px
+  top: 35px
   left: 242px
   z-index: 3
   line-height: 48px
