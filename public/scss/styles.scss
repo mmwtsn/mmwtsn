@@ -1,0 +1,26 @@
+@import "compass/css3";
+@import "compass/reset";
+
+// VARIABLES
+$bg-dark: #00000a;
+$accent-yellow: #fefe6a;
+$accent-blue: #5b9ff3;
+$accent-red: #f25050;
+$grey-med: #888888;
+
+// MIXINS
+@mixin overflow_100 {
+  overflow: hidden;
+  width: 100%;
+}
+
+@function em-calc($target) {
+  @return $target / 16 * 1em;
+}
+
+@import "base";
+@import "typography";
+@import "sidebar";
+@import "article";
+@import "work";
+

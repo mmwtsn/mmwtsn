@@ -1,0 +1,99 @@
+// SIDEBAR NAVIGATION
+.logotype-wrapper {
+  display: block;
+  margin: 0 0 0.5rem 0;
+}
+
+.logotype {
+  display: block;
+  text-transform: none;
+  text-align: center;
+  font-size: 2em;
+  line-height: 200px;
+  width: 200px;
+  color: $bg-dark;
+  background: white;
+
+  &:hover {
+    color: $accent-red;
+  }
+
+  img {
+    height: 1em;
+  }
+}
+
+.social {
+  background: url("/images/social-red.png") 0 0 / auto 30px no-repeat white;
+  width: 30px;
+  height: 30px;
+  display: block;
+
+  &:hover {
+    background-color: $bg-dark;
+  }
+}
+
+.icon-github {
+  background-position: 0 0;
+}
+
+.icon-twitter {
+  background-position: -30px 0;
+}
+
+.icon-linkedin {
+  background-position: -60px 0;
+}
+
+nav {
+  position: relative;
+  height: 370px;
+  margin: 16px;
+  padding: 16px;
+  top: -55px;
+
+  ul {
+    overflow: hidden;
+  }
+
+  a {
+    font-weight: 400;
+    color: white;
+
+    &:hover {
+      color: $bg-dark;
+    }
+  }
+
+  .external {
+    display: inline-block;
+    margin: 0.7rem 1rem 0 0;
+  }
+}
+
+.toggle {
+  position: relative;
+  top: 35px;
+  left: 242px;
+  z-index: 3;
+  line-height: 48px;
+  font-size: 32px;
+  width: 48px;
+  text-align: center;
+  color: $bg-dark;
+  display: block;
+  border: none;
+  background: transparent;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 265px;
+  height: 100%;
+  padding: 0 0 10px 0;
+  background: $accent-red;
+}
+
