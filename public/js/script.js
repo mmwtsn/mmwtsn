@@ -24,44 +24,35 @@ $(document).ready(function() {
   });
 
   var toggleNav = function() {
-    var $nav     = $('nav'); // This should be the entire sidebar, not just the nav
     var $button  = $('#nav-toggle');
-    var $article = $('.article');
     var $aside   = $('aside');
+    var $article = $('.article');
 
-    var start = {'left':'316px'};
-    var end   = {'left':'24px'};
-    var width = {'width':'toggle'};
-    var zero  = {'left':'0'};
-    var full  = {'width':'300px'};
-    var one   = {'width':'1rem'};
+    var aside   = {};
+    var article = {};
+
+    aside.close = {'left':'-250px'};
+    aside.open = {'left':'0px'};
+
+    article.close = {'left':'0px'};
+    article.open = {'left':'255px'};
 
     var animating = false;
 
-    // TODO - BUG
-    // If the "close" button is pressed immediately after
-    // the hover callback function is fired, the is(:hidden)
-    // calculation is done before the callback animation is
-    // complete. This causes a display error.
-
-    // TODO - IMPROVEMENT
-    // The "open" animation is not smooth. Each element
-    // slides in at a different rate.
-
     if(animating == false) {
       $button.click(function() {
+        var asideClosed = $aside.hasClass('closed');
         var $this = $(this);
-        if($nav.is(':hidden')) {
-          $button.animate(start, 250);
-          $nav.animate(width, 250);
-          $article.animate(start, 250);
-          $aside.animate(full, 250);
+
+        if(asideClosed) {
+          $article.animate(article.open, 250);
+          $aside.animate(aside.open, 250);
+          $aside.toggleClass('closed');
         }
-        else {
-          $button.animate(end, 250);
-          $nav.animate(width, 250);
-          $article.animate(zero, 250);
-          $aside.animate(one, 250);
+        else if(!asideClosed) {
+          $article.animate(article.close, 250);
+          $aside.animate(aside.close, 250);
+          $aside.toggleClass('closed');
         }
       });
 

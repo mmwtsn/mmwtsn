@@ -112,10 +112,11 @@ code
     margin: 0 auto
 
 nav
-  display: none
+  position: relative
   height: 370px
   margin: 16px
   padding: 16px
+  top: -50px
   ul
     overflow: hidden
   a
@@ -130,20 +131,25 @@ nav
     margin: 0.5rem 1rem 0 0
 
 .toggle
-  position: absolute
-  top: 6px
-  left: 24px
+  position: relative
+  top: 24px
+  left: 242px
   z-index: 3
   line-height: 48px
   font-size: 32px
   width: 48px
   text-align: center
+  color: $bg-dark
+  display: block
+  border: none
+  background: transparent
 
 aside
   position: fixed
   top: 0
-  left: -1px
-  width: 1rem
+  left: -250px
+  width: 265px
   height: 100%
   padding: 0 0 10px 0
   background: $accent-red
+
