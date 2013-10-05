@@ -11,8 +11,8 @@ $(document).ready(function() {
     aside.close = {'left':'-250px'};
     aside.open  = {'left':'0px'};
 
-    article.close = {'left':'0px'};
-    article.open  = {'left':'255px'};
+    article.close = {'left':'16px'};
+    article.open  = {'left':'264px'};
 
     var animating = false;
 
