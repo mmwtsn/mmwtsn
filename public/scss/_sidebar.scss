@@ -1,9 +1,4 @@
 // SIDEBAR NAVIGATION
-.logotype-wrapper {
-  display: block;
-  margin: 0 0 0.5rem 0;
-}
-
 .logotype {
   display: block;
   text-transform: none;
@@ -11,8 +6,9 @@
   font-size: 2em;
   line-height: 200px;
   width: 200px;
+  margin: 0 0 0.5rem 0;
   color: $bg-dark;
-  background: white;
+  background: #fff;
 
   &:hover {
     color: $accent-red;
@@ -49,9 +45,8 @@
 nav {
   position: relative;
   height: 370px;
-  margin: 16px;
-  padding: 16px;
-  top: -55px;
+  margin: 32px;
+  top: -50px;
 
   ul {
     overflow: hidden;
@@ -81,34 +76,15 @@ nav {
   background-position: -60px 0;
 }
 
-nav {
-  position: relative;
-  height: 370px;
-  margin: 16px;
-  padding: 16px;
-  top: -55px;
-
-  ul {
-    overflow: hidden;
-  }
-
-  a {
-    font-weight: 400;
-    color: white;
-    text-decoration: none;
-  }
-
-  .external {
-    display: inline-block;
-    margin: 0.7rem 1rem 0 0;
-  }
+.external {
+  display: inline-block;
+  margin: 0.7rem 1rem 0 0;
 }
 
 .toggle {
   position: relative;
-  top: 35px;
+  top: 34px;
   left: 242px;
-  z-index: 3;
   line-height: 48px;
   font-size: 32px;
   width: 48px;
@@ -118,15 +94,16 @@ nav {
   border: none;
   background: transparent;
   cursor: pointer;
+  z-index: 2;
 }
 
 aside {
   position: fixed;
   top: 0;
-  left: -250px;
-  width: 265px;
+  left: -248px;
+  width: 264px;
   height: 100%;
-  padding: 0 0 10px 0;
+  padding: 0;
   background: $accent-red;
 }
 

@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+html, body, aside {
+  height: 100%;
+}
+
 li {
   list-style: none;
 }
