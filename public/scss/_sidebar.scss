@@ -26,7 +26,7 @@
   display: block;
 
   &:hover {
-    background-color: $bg-dark;
+    background-color: lighten($accent-red, 2);
   }
 }
 
@@ -58,8 +58,7 @@ nav {
     text-decoration: none;
 
     &:hover {
-      color: $bg-dark;
-      transition: color 0 ease-out 5s;
+      color: lighten($accent-red, 2);
     }
   }
 }

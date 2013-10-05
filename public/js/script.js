@@ -31,6 +31,11 @@ $(document).ready(function() {
         $aside.toggleClass('closed');
       }
     });
+
+    if(window.location.hash === '#open') {
+      $article.css(article.open);
+      $aside.css(aside.open);
+    }
   }
   toggleNav();
 
