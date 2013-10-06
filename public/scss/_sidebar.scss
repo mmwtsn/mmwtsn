@@ -1,55 +1,35 @@
-// SIDEBAR NAVIGATION
-.logotype {
-  display: block;
-  text-transform: none;
-  text-align: center;
-  font-size: 2em;
-  line-height: 200px;
-  width: 200px;
-  margin: 0 0 0.5rem 0;
-  color: $bg-dark;
-  background: #fff;
-
-  &:hover {
-    color: $accent-red;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -248px;
+  width: 264px;
+  height: 100%;
+  padding: 0;
+  background: $accent-red;
+  @include break(med) {
+    width: 236px;
+    left: -225px;
   }
-
-  img {
-    height: 1em;
-  }
-}
-
-.social {
-  background: url("/images/social-red.png") 0 0 / auto 30px no-repeat white;
-  width: 30px;
-  height: 30px;
-  display: block;
-
-  &:hover {
-    background-color: lighten($accent-red, 2);
-  }
-}
-
-.icon-github {
-  background-position: 0 0;
-}
-
-.icon-twitter {
-  background-position: -30px 0;
-}
-
-.icon-linkedin {
-  background-position: -60px 0;
 }
 
 nav {
   position: relative;
-  height: 370px;
+  height: auto;
   margin: 32px;
   top: -50px;
+  @include break(med) {
+    margin: 1rem;
+  }
 
   ul {
     overflow: hidden;
+    @include break(med) {
+    }
+  }
+
+  li {
+    @include break(med) {
+    }
   }
 
   a {
@@ -58,29 +38,12 @@ nav {
     text-decoration: none;
 
     &:hover {
-      color: lighten($accent-red, 2);
+      color: lighten($accent-red, 5%);
     }
   }
 }
 
-.icon-github {
-  background-position: 0 0;
-}
-
-.icon-twitter {
-  background-position: -30px 0;
-}
-
-.icon-linkedin {
-  background-position: -60px 0;
-}
-
-.external {
-  display: inline-block;
-  margin: 0.7rem 1rem 0 0;
-}
-
-.toggle {
+button.toggle {
   position: relative;
   top: 34px;
   left: 242px;
@@ -94,15 +57,77 @@ nav {
   background: transparent;
   cursor: pointer;
   z-index: 2;
+  @include break(med) {
+    left: 220px;
+    font-size: 1.5rem;
+    width: 151%;
+    text-align: left;
+    botder-bottom: 1px solid #eee;
+    background: rgba(248, 248, 248, 0.9);
+  }
 }
 
-aside {
-  position: fixed;
-  top: 0;
-  left: -248px;
-  width: 264px;
-  height: 100%;
-  padding: 0;
-  background: $accent-red;
+.logotype {
+  display: block;
+  text-transform: none;
+  text-align: center;
+  font-size: 2em;
+  line-height: 200px;
+  width: 200px;
+  margin: 0 0 0.5rem 0;
+  color: $bg-dark;
+  background: #fff;
+  @include break(med) {
+  }
+
+  &:hover {
+    color: $accent-red;
+  }
+
+  img {
+    height: 1em;
+    @include break(med) {
+    }
+  }
+}
+
+.external {
+  display: inline-block;
+  margin: 0.7rem 1rem 0 0;
+}
+
+.social {
+  background: url("/images/social-red.png") 0 0 / auto 30px no-repeat white;
+  width: 30px;
+  height: 30px;
+  display: block;
+
+  &:hover {
+    background-color: lighten($accent-red, 5%);
+  }
+}
+
+.icon-github {
+  background-position: 0 0;
+}
+
+.icon-twitter {
+  background-position: -30px 0;
+}
+
+.icon-linkedin {
+  background-position: -60px 0;
+}
+
+.icon-github {
+  background-position: 0 0;
+}
+
+.icon-twitter {
+  background-position: -30px 0;
+}
+
+.icon-linkedin {
+  background-position: -60px 0;
 }
 

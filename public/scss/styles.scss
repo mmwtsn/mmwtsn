@@ -8,10 +8,29 @@ $accent-blue: #5b9ff3;
 $accent-red: #f25050;
 $grey-med: #888888;
 
+$med: 500px;
+$large: 900px;
+$x-large: 1200px;
+
 // MIXINS
-@mixin overflow_100 {
-  overflow: hidden;
-  width: 100%;
+@mixin break($point) {
+  @if $point == x-large {
+    @media (max-width: $x-large) {
+      @content;
+    }
+  }
+
+  @if $point == large {
+    @media (max-width: $large) {
+      @content;
+    }
+  }
+
+  @if $point == med {
+    @media (max-width: $med) {
+      @content;
+    }
+  }
 }
 
 @function em-calc($target) {

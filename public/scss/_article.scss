@@ -3,5 +3,70 @@
   padding: 3rem 4rem;
   position: relative;
   left: 16px;
+
+  @include break(large) {
+    padding: 4rem 2rem;
+  }
+
+  @include break(med) {
+    padding: 4rem 1rem;
+    left: 11px;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+    font-style: italic;
+    font-weight: 800;
+    color: $grey-med;
+
+    @include break(x-large) {
+      font-size: 3.5rem;
+    }
+
+    @include break(large) {
+      font-size: 3rem;
+    }
+
+    @include break(med) {
+      font-size: 1.5rem;
+    }
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 12.5rem;
+    line-height: 12.5rem;
+    margin: 2rem 0;
+
+    @include break(x-large) {
+      font-size: 10.5rem;
+      line-height: 10.5rem;
+    }
+
+    @include break(large) {
+      font-size: 8rem;
+      line-height: 8rem;
+    }
+
+    @include break(med) {
+      font-size: 5rem;
+      line-height: 5rem;
+      margin: 0.5rem 0;
+    }
+  }
+
+  p {
+    max-width: 26rem;
+    width: 98%;
+
+    @include break(x-large) {
+      font-size: 1.2rem;
+      max-width: 32rem;
+    }
+
+    @include break(med) {
+      font-size: 1rem;
+    }
+  }
 }
 
