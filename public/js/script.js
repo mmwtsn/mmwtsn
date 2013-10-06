@@ -1,22 +1,18 @@
 $(document).ready(function() {
 
-  var toggleNav = function() {
+  var toggleNav = function(sidebarClose, aritcleClose) {
     var $button   = $('#nav-toggle');
     var $sidebar  = $('.sidebar');
     var $article  = $('.article');
 
-    var sidebar   = {};
-    var article   = {};
+    var sidebar = {};
+    var article = {};
 
-    sidebar.close = {'left':'-225px'};
-    sidebar.close = {'left':'-250px'};
     sidebar.open  = {'left':'0px'};
+    sidebar.close = {'left' : sidebarClose};
 
-    article.close = {'left':'11px'};
-    article.close = {'left':'16px'};
     article.open  = {'left':'264px'};
-
-    var animating = false;
+    article.close = {'left' : articleClose};
 
     $button.on('click touchstart', function() {
       var sidebarClosed = $sidebar.hasClass('closed');
@@ -28,23 +24,34 @@ $(document).ready(function() {
         $sidebar.toggleClass('closed');
       }
       else if(!sidebarClosed) {
-        $article.animate(article.close, 250);
-        $sidebar.animate(sidebar.close, 250);
+        $article.animate(articleClose, 250);
+        $sidebar.animate(sidebarClose, 250);
         $sidebar.toggleClass('closed');
       }
     });
-
-    var $window = $(window);
-
-    if($window.width() <= 500) {
-      //
-    }
 
     if(window.location.hash === '#open') {
       $article.css(article.open);
       $sidebar.css(sidebar.open);
     }
   }
-  toggleNav();
 
+  var callToggleNav = function() {
+    var $window = $(window);
+
+    if($window.width() > 500) {
+      alert('large');
+      toggleNav('-250px', '-16px');
+    }
+
+    if($window.width() <= 500) {
+      alert('small');
+      toggleNav('-225px', '11px');
+    }
+  }
+  callToggleNav();
+
+  $window.resize(function() {
+    callToggleNav();
+  });
 });
