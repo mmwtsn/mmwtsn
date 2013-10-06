@@ -38,22 +38,22 @@ $(document).ready(function() {
   }
   toggleNav('-250px', '-16px');
 
-  var callToggleNav = function() {
-    var $window = $(window);
+  //var callToggleNav = function() {
+  //  var $window = $(window);
 
-    if($window.width() > 500) {
-      alert('large');
-      toggleNav('-250px', '-16px');
-    }
+  //  if($window.width() > 500) {
+  //    alert('large');
+  //    toggleNav('-250px', '-16px');
+  //  }
 
-    if($window.width() <= 500) {
-      alert('small');
-      toggleNav('-225px', '11px');
-    }
-  }
-  callToggleNav();
+  //  if($window.width() <= 500) {
+  //    alert('small');
+  //    toggleNav('-225px', '11px');
+  //  }
+  //}
+  //callToggleNav();
 
-  $window.resize(function() {
-    callToggleNav();
-  });
+  //$window.resize(function() {
+  //  callToggleNav();
+  //});
 });
