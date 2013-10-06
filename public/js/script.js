@@ -1,40 +1,56 @@
 $(document).ready(function() {
 
   var toggleNav = function() {
-    var $button  = $('#nav-toggle');
-    var $aside   = $('aside');
-    var $article = $('.article');
+    var $button   = $('#nav-toggle');
+    var $sidebar  = $('.sidebar');
+    var $article  = $('.article');
 
-    var aside   = {};
-    var article = {};
+    var sidebar   = {};
+    var article   = {};
 
-    aside.close = {'left':'-250px'};
-    aside.open  = {'left':'0px'};
+    sidebar.close = {'left':'-225px'};
+    sidebar.close = {'left':'-250px'};
+    sidebar.open  = {'left':'0px'};
 
+    article.close = {'left':'11px'};
     article.close = {'left':'16px'};
     article.open  = {'left':'264px'};
 
     var animating = false;
 
     $button.on('click touchstart', function() {
-      var asideClosed = $aside.hasClass('closed');
+      var sidebarClosed = $sidebar.hasClass('closed');
       var $this = $(this);
 
-      if(asideClosed) {
+      if(sidebarClosed) {
         $article.animate(article.open, 250);
-        $aside.animate(aside.open, 250);
-        $aside.toggleClass('closed');
+        $sidebar.animate(sidebar.open, 250);
+        $sidebar.toggleClass('closed');
       }
-      else if(!asideClosed) {
+      else if(!sidebarClosed) {
         $article.animate(article.close, 250);
-        $aside.animate(aside.close, 250);
-        $aside.toggleClass('closed');
+        $sidebar.animate(sidebar.close, 250);
+        $sidebar.toggleClass('closed');
       }
     });
 
+    var $window = $(window);
+
+    if($window.width() <= 1000) {
+      var setButtonWidth = function() {
+        $button.width($window.width());
+      }
+
+      $window.resize(function() {
+        setButtonWidth();
+      });
+
+      setButtonWidth();
+    }
+
     if(window.location.hash === '#open') {
       $article.css(article.open);
-      $aside.css(aside.open);
+      $sidebar.css(sidebar.open);
     }
   }
   toggleNav();
