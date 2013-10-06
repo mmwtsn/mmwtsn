@@ -8,13 +8,14 @@ $(document).ready(function() {
     var sidebar = {};
     var article = {};
 
-    sidebar.open  = {'left':'0px'};
+    sidebar.open  = {'left' : '0px'};
     sidebar.close = {'left' : sidebarClose};
 
-    article.open  = {'left':'264px'};
+    article.open  = {'left' : '264px'};
     article.close = {'left' : articleClose};
 
     $button.on('click touchstart', function() {
+      alert("click");
       var sidebarClosed = $sidebar.hasClass('closed');
       var $this = $(this);
 
@@ -24,8 +25,8 @@ $(document).ready(function() {
         $sidebar.toggleClass('closed');
       }
       else if(!sidebarClosed) {
-        $article.animate(articleClose, 250);
-        $sidebar.animate(sidebarClose, 250);
+        $article.animate(article.close, 250);
+        $sidebar.animate(sidebar.close, 250);
         $sidebar.toggleClass('closed');
       }
     });
@@ -35,6 +36,7 @@ $(document).ready(function() {
       $sidebar.css(sidebar.open);
     }
   }
+  toggleNav('-250px', '-16px');
 
   var callToggleNav = function() {
     var $window = $(window);
