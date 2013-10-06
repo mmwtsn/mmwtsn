@@ -36,16 +36,8 @@ $(document).ready(function() {
 
     var $window = $(window);
 
-    if($window.width() <= 1000) {
-      var setButtonWidth = function() {
-        $button.width($window.width());
-      }
-
-      $window.resize(function() {
-        setButtonWidth();
-      });
-
-      setButtonWidth();
+    if($window.width() <= 500) {
+      //
     }
 
     if(window.location.hash === '#open') {

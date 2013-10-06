@@ -57,10 +57,11 @@ button.toggle {
   background: transparent;
   cursor: pointer;
   z-index: 2;
+
   @include break(med) {
     left: 220px;
     font-size: 1.5rem;
-    width: 151%;
+    width: 99rem;
     text-align: left;
     botder-bottom: 1px solid #eee;
     background: rgba(248, 248, 248, 0.9);

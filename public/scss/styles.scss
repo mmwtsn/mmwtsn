@@ -8,7 +8,8 @@ $accent-blue: #5b9ff3;
 $accent-red: #f25050;
 $grey-med: #888888;
 
-$med: 500px;
+$sm: 500px;
+$med: 600px;
 $large: 900px;
 $x-large: 1200px;
 
@@ -28,6 +29,12 @@ $x-large: 1200px;
 
   @if $point == med {
     @media (max-width: $med) {
+      @content;
+    }
+  }
+
+  @if $point == sm {
+    @media (max-width: $sm) {
       @content;
     }
   }
