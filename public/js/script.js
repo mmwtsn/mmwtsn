@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var toggleNav = function(sidebarClose, aritcleClose) {
+  var toggleNav = function(sidebarClose, articleClose) {
     var $button   = $('#nav-toggle');
     var $sidebar  = $('.sidebar');
     var $article  = $('.article');
@@ -9,13 +9,12 @@ $(document).ready(function() {
     var article = {};
 
     sidebar.open  = {'left' : '0px'};
-    sidebar.close = {'left' : sidebarClose};
+    sidebar.close = {'left' : '-250px'};
 
     article.open  = {'left' : '264px'};
-    article.close = {'left' : articleClose};
+    article.close = {'left' : '-16px'};
 
     $button.on('click touchstart', function() {
-      alert("click");
       var sidebarClosed = $sidebar.hasClass('closed');
       var $this = $(this);
 
@@ -25,9 +24,16 @@ $(document).ready(function() {
         $sidebar.toggleClass('closed');
       }
       else if(!sidebarClosed) {
-        $article.animate(article.close, 250);
-        $sidebar.animate(sidebar.close, 250);
-        $sidebar.toggleClass('closed');
+        if($(window).width() <= 600) {
+          $article.animate({'left':'11px'}, 250);
+          $sidebar.animate({'left':'-225px'}, 250);
+          $sidebar.toggleClass('closed');
+        }
+        if($(window).width() > 600) {
+          $article.animate(article.close, 250);
+          $sidebar.animate(sidebar.close, 250);
+          $sidebar.toggleClass('closed');
+        }
       }
     });
 
@@ -36,24 +42,19 @@ $(document).ready(function() {
       $sidebar.css(sidebar.open);
     }
   }
-  toggleNav('-250px', '-16px');
 
-  //var callToggleNav = function() {
-  //  var $window = $(window);
+  var callToggleNav = function() {
+    var $window = $(window);
+    var breakpoint = 600;
 
-  //  if($window.width() > 500) {
-  //    alert('large');
-  //    toggleNav('-250px', '-16px');
-  //  }
+    if($window.width() > breakpoint) {
+      toggleNav('-250px', '-16px');
+    }
 
-  //  if($window.width() <= 500) {
-  //    alert('small');
-  //    toggleNav('-225px', '11px');
-  //  }
-  //}
-  //callToggleNav();
+    if($window.width() <= breakpoint) {
+      toggleNav('-225px', '11px');
+    }
+  }
+  callToggleNav();
 
-  //$window.resize(function() {
-  //  callToggleNav();
-  //});
 });
