@@ -1,7 +1,7 @@
 body {
   font-family: Gotham, sans-serif;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 300;
   color: $bg-dark;
   background: white;
   overflow-x: hidden;
@@ -21,6 +21,11 @@ code {
   color: #444444;
   padding: 0.2rem 0.4rem;
   border-radius: 2px;
+}
+
+p {
+  font-size: 1.4em;
+  line-height: 1.8em;
 }
 
 footer p {
