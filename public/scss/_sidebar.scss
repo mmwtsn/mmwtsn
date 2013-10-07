@@ -6,6 +6,7 @@
   height: 100%;
   padding: 0;
   background: $accent-red;
+
   @include break(med) {
     width: 236px;
     left: -225px;
@@ -17,19 +18,13 @@ nav {
   height: auto;
   margin: 32px;
   top: -50px;
+
   @include break(med) {
     margin: 1rem;
   }
 
   ul {
     overflow: hidden;
-    @include break(med) {
-    }
-  }
-
-  li {
-    @include break(med) {
-    }
   }
 
   a {
@@ -64,7 +59,7 @@ button.toggle {
     width: 99rem;
     text-align: left;
     botder-bottom: 1px solid #eee;
-    background: rgba(248, 248, 248, 0.9);
+    background: rgba(248, 248, 248, 0.8);
   }
 }
 
@@ -78,8 +73,6 @@ button.toggle {
   margin: 0 0 0.5rem 0;
   color: $bg-dark;
   background: #fff;
-  @include break(med) {
-  }
 
   &:hover {
     color: $accent-red;
@@ -87,8 +80,6 @@ button.toggle {
 
   img {
     height: 1em;
-    @include break(med) {
-    }
   }
 }
 
