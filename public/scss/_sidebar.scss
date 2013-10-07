@@ -1,15 +1,21 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: -248px;
+  left: 0px;
   width: 264px;
   height: 100%;
   padding: 0;
   background: $accent-red;
-
+  transition: left ease 0.7s;
   @include break(med) {
     width: 236px;
-    left: -225px;
+  }
+
+  &.closed {
+    left: -250px;
+    @include break(med) {
+      left: -225px;
+    }
   }
 }
 
@@ -18,7 +24,6 @@ nav {
   height: auto;
   margin: 32px;
   top: -50px;
-
   @include break(med) {
     margin: 1rem;
   }
@@ -31,7 +36,6 @@ nav {
     font-weight: 400;
     color: white;
     text-decoration: none;
-
     &:hover {
       color: lighten($accent-red, 5%);
     }
@@ -52,7 +56,6 @@ button.toggle {
   background: transparent;
   cursor: pointer;
   z-index: 2;
-
   @include break(med) {
     left: 220px;
     font-size: 1.5rem;
@@ -73,7 +76,6 @@ button.toggle {
   margin: 0 0 0.5rem 0;
   color: $bg-dark;
   background: #fff;
-
   &:hover {
     color: $accent-red;
   }
@@ -93,7 +95,6 @@ button.toggle {
   width: 30px;
   height: 30px;
   display: block;
-
   &:hover {
     background-color: lighten($accent-red, 5%);
   }

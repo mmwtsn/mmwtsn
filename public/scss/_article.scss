@@ -1,15 +1,13 @@
 .article {
   padding: 3rem 4rem;
   position: relative;
-  left: 16px;
-
+  left: 264px;
+  transition: left ease 0.7s;
   @include break(large) {
     padding: 1.5rem 4rem;
   }
-
   @include break(med) {
     padding: 4rem 1rem;
-    left: 11px;
   }
 
   h1, h2, p {
@@ -21,19 +19,15 @@
     font-style: italic;
     font-weight: 800;
     color: $grey-med;
-
     @include break(x-large) {
       font-size: 3.5rem;
     }
-
     @include break(large) {
       font-size: 3rem;
     }
-
     @include break(med) {
       font-size: 2.5rem;
     }
-
     @include break(sm) {
       font-size: 1.5rem;
     }
@@ -44,22 +38,18 @@
     font-size: 12.5rem;
     line-height: 12.5rem;
     margin: 2rem 0;
-
     @include break(x-large) {
       font-size: 10.5rem;
       line-height: 10.5rem;
     }
-
     @include break(large) {
       font-size: 8rem;
       line-height: 8rem;
     }
-
     @include break(med) {
       font-size: 6rem;
       line-height: 6rem;
     }
-
     @include break(sm) {
       font-size: 5rem;
       line-height: 5rem;
@@ -68,16 +58,22 @@
   }
 
   p {
+    padding: 0.5em 0;
     max-width: 26rem;
     width: 98%;
-
     @include break(x-large) {
       font-size: 1.2rem;
       max-width: 32rem;
     }
-
     @include break(sm) {
       font-size: 1rem;
+    }
+  }
+
+  &.closed {
+    left: 16px;
+    @include break(med) {
+      left: 11px;
     }
   }
 }

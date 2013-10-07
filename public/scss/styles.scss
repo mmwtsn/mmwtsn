@@ -1,3 +1,4 @@
+// HELPER LIBRARIES
 @import "compass/css3";
 @import "compass/reset";
 
@@ -44,8 +45,8 @@ $x-large: 1200px;
   @return $target / 16 * 1em;
 }
 
+// PARTIALS
 @import "base";
-@import "typography";
 @import "sidebar";
 @import "article";
 @import "work";
