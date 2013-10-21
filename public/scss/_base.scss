@@ -23,11 +23,13 @@ code {
   border-radius: 2px;
 }
 
-p {
-  font-size: 1.4em;
-  line-height: 1.8em;
+p, a {
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 
-footer p {
-  color: $grey-med;
+footer {
+  p {
+    color: $grey-med !important;
+  }
 }

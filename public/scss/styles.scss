@@ -42,7 +42,7 @@ $x-large: 1200px;
 }
 
 @function em-calc($target) {
-  @return $target / 16 * 1em;
+  @return $target / 16 * 1rem;
 }
 
 // PARTIALS
