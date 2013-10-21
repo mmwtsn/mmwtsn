@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7853452/754242/css/fonts.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="/js/jquery.js"></script>
+    <script src="/lib/jquery.min.js"></script>
     <script src="/js/script.js"></script>
   <head>
 
@@ -18,8 +18,8 @@
         <ul>
           <li><a href="/" class="logotype"><img src="/images/logotype-red.png" alt="mmwtsn" /></a></li>
           <li><a href="/words">words</a></li>
-          <li><a href="/about">about</a></li>
           <li><a href="/work">work</a></li>
+          <li><a href="/about">about</a></li>
           <li class="external"><a class="social icon-github" href="https://github.com/mmwtsn"></a></li>
           <li class="external"><a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a></li>
           <li class="external"><a class="social icon-linkedin" href="https://www.linkedin.com/in/mmwtsn"></a></li>
@@ -27,13 +27,13 @@
       </nav>
     </aside>
 
-    <section class="<%= @class %> wrapper closed">
+    <<%= @element ? @element : "section" %> class="<%= @class %> wrapper closed">
       <%= yield %>
 
       <footer>
-        <p>&copy; m. maxwell watson 2013</p>
+        <p>&copy; m. maxwell watson <%= DateTime.now.year %></p>
       </footer>
-    </section>
+    </<%= @element ? @element : "section" %>>
 
   </body>
 </html>
