@@ -17,8 +17,9 @@ end
 
 # Words (blog), Work (portfolio) and About (personal infomration)
 get '/words/?' do
-  @class = 'words'
-  erb :words
+  #@class = 'words'
+  #erb :words
+  redirect '/musings/first'
 end
 
 get '/work/?' do

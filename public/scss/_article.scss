@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 3rem 4rem;
+  padding: 5rem 0 0 7rem;
   position: relative;
   left: 264px;
   transition: left ease 0.7s;
@@ -16,14 +16,13 @@
       left: 11px;
     }
   }
-}
 
-.article {
   h2 {
     font-size: 4.5rem;
     font-style: italic;
     font-weight: 800;
     color: $grey-med;
+    margin: 0 0 2rem;
     @include break(x-large) {
       font-size: 3.5rem;
     }
@@ -42,7 +41,7 @@
     font-weight: 600;
     font-size: 12rem;
     line-height: 12rem;
-    margin: 2rem 0;
+    margin: 0 0 2rem;
     @include break(x-large) {
       font-size: 10.5rem;
       line-height: 10.5rem;
@@ -64,7 +63,7 @@
 
   p {
     padding: 0.5rem 0;
-    max-width: 26rem;
+    max-width: 30rem;
     width: 98%;
     color: #333;
     @include break(x-large) {

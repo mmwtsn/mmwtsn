@@ -23,9 +23,22 @@ code {
   border-radius: 2px;
 }
 
+.wrapper a {
+  background: lighten($accent-red, 30%);
+  border: 1px dotted lighten($accent-red, 25%);
+  color: #444;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2rem 0.3rem;
+
+  &:hover {
+    color: #666;
+  }
+}
+
 p, a {
   font-size: 1.4rem;
-  line-height: 2rem;
+  line-height: 2.2rem;
 }
 
 footer {
