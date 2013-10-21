@@ -37,7 +37,7 @@ nav {
     color: white;
     text-decoration: none;
     &:hover {
-      color: lighten($accent-red, 5%);
+      color: lighten($accent-red, 20%);
     }
   }
 }
@@ -70,7 +70,7 @@ button.toggle {
   display: block;
   text-transform: none;
   text-align: center;
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 200px;
   width: 200px;
   margin: 0 0 0.5rem 0;
@@ -81,7 +81,7 @@ button.toggle {
   }
 
   img {
-    height: 1em;
+    height: 2rem;
   }
 }
 
@@ -96,7 +96,7 @@ button.toggle {
   height: 30px;
   display: block;
   &:hover {
-    background-color: lighten($accent-red, 5%);
+    background-color: lighten($accent-red, 20%);
   }
 }
 
