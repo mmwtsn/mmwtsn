@@ -9,15 +9,32 @@ require './helpers'
 # Use default ERB layout wrapper for all markdown files
 set :markdown, :layout_engine => :erb, :layout => :layout
 
-# Static Routes
-get "/?" do
+# Index
+get '/?' do
   @class = 'home'
   redirect '/musings/first'
 end
 
+# Words (blog), Work (portfolio) and About (personal infomration)
+get '/words/?' do
+  @class = 'words'
+  erb :words
+end
+
+get '/work/?' do
+  @class = 'work'
+  erb :work
+end
+
+get '/about/?' do
+  @class = 'about'
+  erb :about
+end
+
 # Markdown routes
-get "/*/?" do
-  @class = "article"
+get '/*/?' do
+  @class = 'article'
+  @element = 'article'
   render_markdown
 end
 
