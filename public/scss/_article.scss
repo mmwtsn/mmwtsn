@@ -9,7 +9,6 @@ body.closed .wrapper {
   padding: 5rem 0 0 7rem;
   position: relative;
   left: 264px;
-  transition: left ease 0.7s;
   @include break(large) {
     padding: 1.5rem 4rem;
   }
@@ -72,6 +71,19 @@ body.closed .wrapper {
     }
     @include break(sm) {
       font-size: 1rem;
+    }
+  }
+
+  a {
+    background: lighten($accent-red, 30%);
+    border: 1px dotted lighten($accent-red, 25%);
+    color: #444;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.2rem 0.3rem;
+
+    &:hover {
+      color: #666;
     }
   }
 }

@@ -31,16 +31,9 @@ a, button {
   }
 }
 
-.wrapper a {
-  background: lighten($accent-red, 30%);
-  border: 1px dotted lighten($accent-red, 25%);
-  color: #444;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.2rem 0.3rem;
-
-  &:hover {
-    color: #666;
+body.ready {
+  .wrapper, .sidebar {
+    transition: left ease 0.7s;
   }
 }
 
