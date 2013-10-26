@@ -23,6 +23,14 @@ code {
   border-radius: 2px;
 }
 
+a, button {
+  outline: none;
+
+  &:link, &:hover, &:active, &:visited {
+    outline: none;
+  }
+}
+
 .wrapper a {
   background: lighten($accent-red, 30%);
   border: 1px dotted lighten($accent-red, 25%);
