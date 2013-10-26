@@ -1,3 +1,10 @@
+body.closed .wrapper {
+  left: 16px;
+  @include break(med) {
+    left: 11px;
+  }
+}
+
 .wrapper {
   padding: 5rem 0 0 7rem;
   position: relative;
@@ -8,13 +15,6 @@
   }
   @include break(med) {
     padding: 4rem 1rem;
-  }
-
-  &.closed {
-    left: 16px;
-    @include break(med) {
-      left: 11px;
-    }
   }
 
   h2 {
