@@ -8,12 +8,11 @@ body.closed .sidebar {
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0px;
+  left: 0;
   width: 264px;
   height: 100%;
   padding: 0;
   background: $accent-red;
-  transition: left ease 0.7s;
   @include break(med) {
     width: 236px;
   }
