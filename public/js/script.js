@@ -1,17 +1,18 @@
-$(document).ready(function() {
+var toggleSlide = function() {
+    var body = document.getElementsByTagName("body")[0];
+    var button = document.getElementById("nav-toggle");
 
-  var toggleSidebar = function() {
-    var $button   = $('#nav-toggle');
-    var $slideable = $('.sidebar, .wrapper');
+    toggleClosed = function() {
 
-    $button.on('click touchstart', function() {
-      $slideable.toggleClass('closed');
-    });
+        if (body.classList.contains("closed")) {
+            body.classList.remove("closed");
+        }
+        else {
+            body.classList.add("closed");
+        }
+    };
 
-    if(window.location.hash === '#open') {
-      $slideable.toggleClass('closed');
-    }
-  }
-  toggleSidebar();
+    button.onclick = toggleClosed;
+}
+toggleSlide();
 
-});
