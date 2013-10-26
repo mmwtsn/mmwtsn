@@ -1,3 +1,10 @@
+body.closed .sidebar {
+  left: -250px;
+  @include break(med) {
+    left: -225px;
+  }
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -9,13 +16,6 @@
   transition: left ease 0.7s;
   @include break(med) {
     width: 236px;
-  }
-
-  &.closed {
-    left: -250px;
-    @include break(med) {
-      left: -225px;
-    }
   }
 }
 
