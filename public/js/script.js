@@ -4,10 +4,10 @@ function toggleSlide() {
     var body = document.getElementsByTagName("body")[0];
     var button = document.getElementById("nav-toggle");
 
-    var toggleClass = "closed";
-
     // Toggle the "closed" class on <body> when #nav-toggle is clicked
     button.onclick = function() {
+        var toggleClass = "closed";
+
         if (body.classList.contains(toggleClass)) {
             body.classList.remove(toggleClass);
         }
