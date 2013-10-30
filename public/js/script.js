@@ -1,15 +1,25 @@
-// Fade site header + nav when reading
-$(window).scroll(function() {
+// Toggles the visibility of the sidebar element
+function toggleSlide() {
+    // Cache HTML elements to be interacted with later
+    var body = document.getElementsByTagName("body")[0];
+    var button = document.getElementById("nav-toggle");
 
-  $this = $(this);
-  $scrollTags = $('header, aside');
-  fadePoint = 80;
+    // Toggle the "closed" class on <body> when #nav-toggle is clicked
+    button.onclick = function() {
+        var toggleClass = "closed";
 
-  if($this.scrollTop() > fadePoint) {
-    $scrollTags.fadeOut();
-  }
-  if($this.scrollTop() <= fadePoint) {
-    $scrollTags.fadeIn();
-  }
-});
+        if (body.classList.contains(toggleClass)) {
+            body.classList.remove(toggleClass);
+        }
+        else {
+            body.classList.add(toggleClass);
+        }
+    };
+
+    // Prevent CSS3 Transition from firing before DOM is completely drawn in WebKit
+    window.onload = function() {
+        body.classList.add("ready");
+    };
+}
+toggleSlide();
 

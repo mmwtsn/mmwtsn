@@ -1,0 +1,50 @@
+body {
+  font-family: Gotham, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: $bg-dark;
+  background: white;
+  overflow-x: hidden;
+}
+
+html, body, aside {
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+code {
+  font-family: monospace;
+  background: #eeeeee;
+  color: #444444;
+  padding: 0.2rem 0.4rem;
+  border-radius: 2px;
+}
+
+a, button {
+  outline: none;
+
+  &:link, &:hover, &:active, &:visited {
+    outline: none;
+  }
+}
+
+body.ready {
+  .wrapper, .sidebar {
+    transition: left ease 0.7s;
+  }
+}
+
+p, a {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
+footer {
+  p {
+    margin: 2rem 0;
+    color: $grey-med !important;
+  }
+}

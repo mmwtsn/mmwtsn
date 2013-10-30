@@ -1,0 +1,53 @@
+// HELPER LIBRARIES
+@import "compass/css3";
+@import "compass/reset";
+
+// VARIABLES
+$bg-dark: #00000a;
+$accent-yellow: #fefe6a;
+$accent-blue: #5b9ff3;
+$accent-red: #f25050;
+$grey-med: #aaa;
+
+$sm: 500px;
+$med: 600px;
+$large: 900px;
+$x-large: 1200px;
+
+// MIXINS
+@mixin break($point) {
+  @if $point == x-large {
+    @media (max-width: $x-large) {
+      @content;
+    }
+  }
+
+  @if $point == large {
+    @media (max-width: $large) {
+      @content;
+    }
+  }
+
+  @if $point == med {
+    @media (max-width: $med) {
+      @content;
+    }
+  }
+
+  @if $point == sm {
+    @media (max-width: $sm) {
+      @content;
+    }
+  }
+}
+
+@function em-calc($target) {
+  @return $target / 16 * 1rem;
+}
+
+// PARTIALS
+@import "base";
+@import "sidebar";
+@import "article";
+@import "work";
+
