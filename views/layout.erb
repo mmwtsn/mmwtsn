@@ -1,38 +1,37 @@
-<!DOCTYPE>
-<!--[if IE 8]>         <html class="lt-ie9">  <![endif]-->
-<!--[if gt IE 8]><!--> <html class="gt-ie9">  <!--<![endif]-->
-
+<!doctype html>
+<html>
   <head>
     <link href="/css/styles.css" rel="stylesheet">
     <title>mmwtsn » <%= @page %></title>
     <meta charset="utf8">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="/js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7853452/754242/css/fonts.css" />
+    <link rel="icon" type="image/png" id="favicon" href="/images/favicon.png" />
   <head>
 
-  <body>
-
-    <header>
-      <nav>
+  <body class="closed">
+    <aside id="sidebar" class="sidebar">
+      <nav role="navigation">
+        <button id="nav-toggle" class="toggle" href="#">&#9776;</button>
         <ul>
-          <h1>mmwtsn</h1>
+          <li><a href="/" class="logotype"><img src="/images/logotype-red.png" alt="mmwtsn" /></a></li>
+          <li><a href="/words">words</a></li>
+          <li><a href="/work">work</a></li>
           <li><a href="/about">about</a></li>
-          <li><a href="/musings">musings</a></li>
+          <li class="external"><a class="social icon-github" href="https://github.com/mmwtsn"></a></li>
+          <li class="external"><a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a></li>
+          <li class="external"><a class="social icon-linkedin" href="https://www.linkedin.com/in/mmwtsn"></a></li>
         </ul>
       </nav>
-    </header>
-
-    <%= yield %>
-
-    <footer>
-      <p>&copy; m. maxwell watson 2012-2013</p>
-    </footer>
-
-    <aside>
-      <a class="social icon_twitter" href="http://twitter.com/mmwtsn"></a>
-      <a class="social icon_github" href="https://github.com/mmwtsn"></a>
     </aside>
 
-  </body>
+    <<%= @element ? @element : "section" %> id="wrapper" class="<%= @class %> wrapper">
+      <%= yield %>
 
+      <footer>
+        <p>&copy; m. maxwell watson <%= DateTime.now.year %></p>
+      </footer>
+    </<%= @element ? @element : "section" %>>
+
+  </body>
 </html>

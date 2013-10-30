@@ -1,6 +1,6 @@
 # mmwtsn.com
 
-This is a very simple web site that contains my blog, portfolio and some professional information. It was written in Ruby, HTML5 and [SASS](http://sass-lang.com/) (good ol', whitespace lovin', SASS) using [Sinatra](http://www.sinatrarb.com/). It is currently hosted on [Heroku](http://www.heroku.com/). All of the blog posts are written in [Markdown](http://daringfireball.net/projects/markdown/) edited in [Mou](http://mouapp.com/) (which, by the way, is excellent; I highly recommend it).
+This is a very simple web site that contains my blog, portfolio and some professional information. It was written in Ruby, HTML5 and [SASS](http://sass-lang.com/) (good ol', whitespace lovin', SASS) using [Sinatra](http://www.sinatrarb.com/). It is currently hosted on [Heroku](http://www.heroku.com/). All of the blog posts are written in [Markdown](http://daringfireball.net/projects/markdown/) edited in [Mou](http://mouapp.com/).
 
 My site is open source. Feel free to fork it, bork it, twork it as you please. Pre-requsites to join the party: 
 
