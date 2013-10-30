@@ -17,7 +17,7 @@ function toggleSlide() {
     };
 
     // Prevent CSS3 Transition from firing before DOM is completely drawn in WebKit
-    window.onload = function(){
+    window.onload = function() {
         body.classList.add("ready");
     };
 }
