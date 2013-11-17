@@ -5,13 +5,16 @@ body.closed .wrapper {
   }
 }
 
+// TODO - move this to a general class location
 .wrapper {
-  padding: 5rem 0 0 7rem;
+  margin: 5rem 0 0 7rem;
   position: relative;
   left: 264px;
+
   @include break(large) {
     padding: 1.5rem 4rem;
   }
+
   @include break(med) {
     padding: 4rem 1rem;
   }
