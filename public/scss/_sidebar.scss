@@ -1,11 +1,11 @@
 body.closed .sidebar {
-  left: -250px;
-  @include break(med) {
-    left: -225px;
+    left: -250px;
+    @include break(med) {
+      left: -225px;
+    }
   }
-}
 
-.sidebar {
+  .sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -41,21 +41,27 @@ nav {
   }
 }
 
-button.toggle {
+a.toggle {
   position: relative;
-  top: 35px;
+  top: 34px;
   left: 252px;
   line-height: 48px;
   font-size: 32px;
   width: 48px;
   text-align: center;
   color: $bg-dark;
+  cursor: pointer;
   display: block;
   border: none;
   background: transparent;
   cursor: pointer;
   z-index: 2;
+  &:hover {
+    color: $bg-dark;
+  }
+
   @include break(med) {
+    padding: 0 0 0 1rem;
     left: 220px;
     font-size: 1.5rem;
     width: 99rem;
