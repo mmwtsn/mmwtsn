@@ -9,32 +9,42 @@
     <link rel="icon" type="image/png" id="favicon" href="/images/favicon.png" />
   <head>
 
-  <body class="closed">
-    <!--
-    <aside id="sidebar" class="sidebar">
-      <nav role="navigation">
+  <body>
+    <header>
+      <nav class="wrapper" role="navigation">
+<!--
         <a id="nav-toggle" class="toggle" href="#">&#9776;</a>
+-->
+
         <ul>
-          <li><a href="/" class="logotype"><img src="/images/logotype-red.png" alt="mmwtsn" /></a></li>
+          <li><a href="/">m. maxwell watson</a></li>
           <li><a href="/words">words</a></li>
           <li><a href="/work">work</a></li>
           <li><a href="/about">about</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+    <<%= @element ? @element : "section" %> class="<%= @class %> wrapper">
+      <%= yield %>
+    </<%= @element ? @element : "section" %>>
+    </main>
+
+    <footer>
+      <div class="wrapper">
+        <p>&copy; m. maxwell watson <%= DateTime.now.year %></p>
+<!--
           <li class="external"><a class="social icon-github" href="https://github.com/mmwtsn"></a></li>
           <li class="external"><a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a></li>
           <li class="external"><a class="social icon-linkedin" href="https://www.linkedin.com/in/mmwtsn"></a></li>
-        </ul>
-      </nav>
-    </aside>
-    -->
+-->
+      </div>
+    </footer>
 
-    <<%= @element ? @element : "section" %> id="wrapper" class="<%= @class %> wrapper">
-      <%= yield %>
-
-      <footer>
-        <p>&copy; m. maxwell watson <%= DateTime.now.year %></p>
-      </footer>
-    </<%= @element ? @element : "section" %>>
-
+<!--
     <script src="/js/script.js" type="text/javascript"></script>
+-->
   </body>
 </html>
+
