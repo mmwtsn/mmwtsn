@@ -5,9 +5,11 @@ helpers do
 
   def render_markdown
     route = params[:splat][0]
-    if route.slice(0,7) == "staging"
-      protected
+
+    if route.slice(8,1) == '_'
+      halt 404
     end
+
     valid_route? route
     markdown route.to_sym
   end
