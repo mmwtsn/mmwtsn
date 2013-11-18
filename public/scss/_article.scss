@@ -1,15 +1,6 @@
-body.closed .wrapper {
-//  left: 16px;
-//  @include break(med) {
-//    left: 11px;
-//  }
-}
-
-// TODO - move this to a general class location
-.wrapper {
-//  margin: 5rem 0 0 7rem;
-//  position: relative;
-//  left: 264px;
+.article {
+  background: #fff;
+  padding: 400px 0 0 0;
 
   @include break(large) {
     padding: 1.5rem 4rem;
@@ -24,15 +15,12 @@ body.closed .wrapper {
     width: 100%;
     line-height: 8rem;
     border-bottom: 0px none;
-    padding: 10% 0px 5% 5%;
-    margin: 0px 0px 5rem;
-    -moz-font-feature-settings: "smcp";
+    padding: 10% 0 0 0;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3.95rem;
     font-weight: 800;
     position: relative;
-    color: #FFF;
-    background: none repeat scroll 0% 0% #111;
+    color: #fff;
 
     @include break(x-large) {
       font-size: 10.5rem;
@@ -57,14 +45,15 @@ body.closed .wrapper {
   }
 
   h2 {
-    display: none;
+    background: #111;
+    padding: 0 0 5% 0;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #888;
+    margin: 0 0 2rem 0;
 
-
-    font-size: 4.5rem;
-    font-style: italic;
-    font-weight: 800;
-    color: $grey-med;
-    margin: 0 0 2rem;
     @include break(x-large) {
       font-size: 3.5rem;
     }
@@ -96,16 +85,17 @@ body.closed .wrapper {
   }
 
   a {
-    background: lighten($accent-red, 30%);
-    border: 1px dotted lighten($accent-red, 25%);
-    color: #444;
-    text-decoration: none;
     display: inline-block;
     padding: 0.2rem 0.3rem;
+  }
 
-    &:hover {
-      color: #666;
-    }
+  .meta {
+      background: $grey-dark;
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      right: 0;
+      height: 400px;
   }
 }
 

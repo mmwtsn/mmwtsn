@@ -3,11 +3,10 @@
 @import "compass/reset";
 
 // VARIABLES
-$bg-dark: #00000a;
-$accent-yellow: #fefe6a;
-$accent-blue: #5b9ff3;
-$accent-red: #f25050;
-$grey-med: #aaa;
+$grey-dark: #111;
+$grey-med: #333;
+$grey-light: #666;
+$accent: #63baf9;
 
 $sm: 500px;
 $med: 600px;
@@ -45,9 +44,24 @@ $x-large: 1200px;
   @return $target / 16 * 1rem;
 }
 
+// TYPOGRAPHY
+@font-face {
+    font-family: "Brannboll";
+    src: url("/fonts/brannboll.otf");
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1050px;
+  width: 100%;
+}
+
 // PARTIALS
 @import "base";
-@import "sidebar";
+@import "header";
+@import "footer";
+
+// PAGES
 @import "article";
 @import "work";
 

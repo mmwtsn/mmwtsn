@@ -2,8 +2,6 @@ body {
   font-family: Gotham, sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: $bg-dark;
-  background: white;
   overflow-x: hidden;
 }
 
@@ -23,7 +21,16 @@ code {
   border-radius: 2px;
 }
 
-a, button {
+a {
+  color: $accent;
+  text-decoration: underline;
+
+  &:hover {
+    color: lighten($accent, 3%);
+  }
+}
+
+a {
   outline: none;
 
   &:link, &:hover, &:active, &:visited {
@@ -42,9 +49,3 @@ p, a {
   line-height: 2.2rem;
 }
 
-footer {
-  p {
-    margin: 2rem 0;
-    color: $grey-med !important;
-  }
-}

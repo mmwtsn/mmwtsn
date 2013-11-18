@@ -21,11 +21,6 @@ nav {
     font-size: 1.5rem;
     font-family: Brannboll;
     text-decoration: none;
-    color: $accent;
-
-    &:hover {
-      color: lighten($accent, 3%);
-    }
   }
 }
 
