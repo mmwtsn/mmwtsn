@@ -1,4 +1,9 @@
-<img src="/images/sample_post.png" alt="sample post"/>
+<div class="meta">
+  <div class="wrapper">
+    <h1>This is a test post</h1>
+    <h2>december 17th, 2013</h2>
+  </div>
+</div>
 
 This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. This is a mother-effing Markdown file. There is a lot of text in here. 
 
