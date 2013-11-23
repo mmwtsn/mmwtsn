@@ -12,8 +12,8 @@
   </head>
 
   <body>
-    <header>
-      <nav class="inner-wrapper" role="navigation">
+    <header class="chrome--header container">
+      <nav class="chrome--nav" role="navigation">
         <a id="nav-toggle" class="toggle" href="#">&#9776;</a>
 
         <ul>
@@ -25,16 +25,14 @@
       </nav>
     </header>
 
-    <main role="main">
+    <main class="chrome--main container" role="main">
       <section class="<%= @class %>">
 
         <div class="meta" <%= header_image? %>>
-          <div class="inner-wrapper">
-            <h1><%= @header %></h1>
-            <h2><%= @sub_header %></h2>
+          <h1><%= @header %></h1>
+          <h2><%= @sub_header %></h2>
 
-            <%# link? %>
-          </div>
+          <%# link? %>
         </div>
 
         <%= yield %>
@@ -42,14 +40,12 @@
       </section>
     </main>
 
-    <footer>
-      <div class="inner-wrapper">
-        <p>&copy; m. maxwell watson <%= DateTime.now.year %></p>
+    <footer class="chrome--footer container">
+      <p>&copy; m. maxwell watson <%= DateTime.now.year %></p>
 
-        <li class="external"><a class="social icon-github" href="https://github.com/mmwtsn"></a></li>
-        <li class="external"><a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a></li>
-        <li class="external"><a class="social icon-linkedin" href="https://www.linkedin.com/in/mmwtsn"></a></li>
-      </div>
+      <li class="external"><a class="social icon-github" href="https://github.com/mmwtsn"></a></li>
+      <li class="external"><a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a></li>
+      <li class="external"><a class="social icon-linkedin" href="https://www.linkedin.com/in/mmwtsn"></a></li>
     </footer>
 
     <script src="/js/script.js" type="text/javascript"></script>
