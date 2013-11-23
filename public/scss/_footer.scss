@@ -1,5 +1,39 @@
 footer {
+  margin: 5% 0 0 0;
   padding: 1.5rem 2rem;
   background: $grey-med;
+
+  p {
+    color: #fff;
+  }
+}
+
+.external {
+  margin: 0.7rem 1rem 0 0;
+  position: absolute;
+  top: -5px;
+  right: 0;
+}
+
+.social {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: relative;
+  background-image: url("/images/social-white.png");
+}
+
+.icon-github {
+  background-position: 0 0;
+  left: -100px;
+}
+
+.icon-twitter {
+  background-position: -30px 0;
+  left: -50px;
+}
+
+.icon-linkedin {
+  background-position: -60px 0;
 }
 

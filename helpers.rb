@@ -1,17 +1,30 @@
 helpers do
-  def valid_route? route
-    halt 404 unless File.exists? "views/#{route}.md"
+  def valid_file? file
+    halt 404 unless File.exists? file
   end
 
   def render_markdown
-    route = params[:splat][0]
+    request = params[:splat][0]
 
-    if route.slice(8,1) == '_'
-      halt 404
-    end
+    file = "views/#{request}.md"
+    valid_file? file
 
-    valid_route? route
-    markdown route.to_sym
+    post = IO.read(file)
+    meta = YAML.load(post)
+    body = post.split("---")[2]
+
+    @header        = meta["title"]
+    @sub_header    = meta["date"]
+
+    @content = RDiscount.new(body).to_html
+  end
+
+  def header_image?
+    @header_image ? "style=\"background-image: #{ @header_image };\"" : '' 
+  end
+
+  def link?
+    @text ? "<a href=\"#{ @href }\">#{ @text }</a>" : ''
   end
 
   def not_found

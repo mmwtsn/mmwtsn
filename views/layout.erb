@@ -1,20 +1,20 @@
 <!doctype html>
 <html>
   <head>
-    <link href="/css/styles.css" rel="stylesheet">
-    <title>mmwtsn » <%= @page %></title>
+    <title>mmwtsn » <%= @title %></title>
+
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7853452/754242/css/fonts.css" />
     <link rel="icon" type="image/png" id="favicon" href="/images/favicon.png" />
-  <head>
+    <link href="/css/styles.css" rel="stylesheet">
+  </head>
 
   <body>
     <header>
-      <nav class="wrapper" role="navigation">
-<!--
+      <nav class="inner-wrapper" role="navigation">
         <a id="nav-toggle" class="toggle" href="#">&#9776;</a>
--->
 
         <ul>
           <li><a href="/">m. maxwell watson</a></li>
@@ -26,25 +26,33 @@
     </header>
 
     <main role="main">
-    <<%= @element ? @element : "section" %> class="<%= @class %> wrapper">
-      <%= yield %>
-    </<%= @element ? @element : "section" %>>
+      <section class="<%= @class %>">
+
+        <div class="meta" <%= header_image? %>>
+          <div class="inner-wrapper">
+            <h1><%= @header %></h1>
+            <h2><%= @sub_header %></h2>
+
+            <%# link? %>
+          </div>
+        </div>
+
+        <%= yield %>
+
+      </section>
     </main>
 
     <footer>
-      <div class="wrapper">
+      <div class="inner-wrapper">
         <p>&copy; m. maxwell watson <%= DateTime.now.year %></p>
-<!--
-          <li class="external"><a class="social icon-github" href="https://github.com/mmwtsn"></a></li>
-          <li class="external"><a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a></li>
-          <li class="external"><a class="social icon-linkedin" href="https://www.linkedin.com/in/mmwtsn"></a></li>
--->
+
+        <li class="external"><a class="social icon-github" href="https://github.com/mmwtsn"></a></li>
+        <li class="external"><a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a></li>
+        <li class="external"><a class="social icon-linkedin" href="https://www.linkedin.com/in/mmwtsn"></a></li>
       </div>
     </footer>
 
-<!--
     <script src="/js/script.js" type="text/javascript"></script>
--->
   </body>
 </html>
 

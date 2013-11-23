@@ -50,10 +50,12 @@ $x-large: 1200px;
     src: url("/fonts/brannboll.otf");
 }
 
-.wrapper {
+.inner-wrapper {
   margin: 0 auto;
-  max-width: 1050px;
+  max-width: 1140px;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 // PARTIALS

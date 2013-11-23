@@ -6,6 +6,7 @@
 
     // Cache HTML elements to be interacted with later
     var body   = document.getElementsByTagName("body")[0];
+    /*
     var button = document.getElementById("nav-toggle");
 
     // Toggle the "closed" class on <body> when #nav-toggle is clicked
@@ -19,6 +20,7 @@
             body.classList.add(toggleClass);
         }
     };
+    */
 
     // ---------------------------------
     // PREVENT RENDERING ANIMATION FLASH

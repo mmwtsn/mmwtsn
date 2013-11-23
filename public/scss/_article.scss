@@ -1,6 +1,4 @@
-.article {
-  background: #fff;
-  padding: 400px 0 0 0;
+.musing {
 
   @include break(large) {
     padding: 1.5rem 4rem;
@@ -10,14 +8,23 @@
     padding: 4rem 1rem;
   }
 
+  a {
+    display: inline-block;
+    padding: 0.2rem 0.3rem;
+  }
+}
+
+.meta {
+  background: $grey-dark;
+  margin: 0 0 5% 0;
+  padding: 5% 0 2.5% 0;
+
   h1 {
     text-align: left;
     width: 100%;
     line-height: 8rem;
-    border-bottom: 0px none;
-    padding: 10% 0 0 0;
     text-transform: uppercase;
-    font-size: 3.95rem;
+    font-size: 3.85rem;
     font-weight: 800;
     position: relative;
     color: #fff;
@@ -45,14 +52,12 @@
   }
 
   h2 {
-    background: #111;
-    padding: 0 0 5% 0;
+    padding: 0 0 2rem 0;
     font-size: 2rem;
     font-style: normal;
     font-weight: 600;
     text-transform: capitalize;
     color: #888;
-    margin: 0 0 2rem 0;
 
     @include break(x-large) {
       font-size: 3.5rem;
@@ -68,11 +73,16 @@
     }
   }
 
+}
+
+.content-width {
+  overflow: hidden;
+
   p {
     color: #333;
     margin: 0px auto;
     padding: 1rem 0px;
-    width: 35rem;
+    width: 36rem;
     text-align: justify;
 
     @include break(x-large) {
@@ -83,19 +93,26 @@
       font-size: 1rem;
     }
   }
-
-  a {
-    display: inline-block;
-    padding: 0.2rem 0.3rem;
-  }
-
-  .meta {
-      background: $grey-dark;
-      position: absolute;
-      top: 5rem;
-      left: 0;
-      right: 0;
-      height: 400px;
-  }
 }
 
+.left-col {
+  float: left;
+  width: 30%;
+}
+
+.main-col {
+  float: left;
+  with: 60%;
+}
+
+.external-links {
+  width: auto;
+  font-size: 1em;
+}
+
+.content-image {
+
+  img {
+    width: 200px;
+  }
+}

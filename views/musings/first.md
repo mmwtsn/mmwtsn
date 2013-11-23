@@ -1,11 +1,7 @@
-<div class="meta">
-  <div class="wrapper">
-    <h1>how not to build a website</h1>
-    <h2>october 17th, 2013</h2>
-  </div>
-</div>
-
-<a href="#">discuss on hacker news</a>
+---
+title: how not to build a website
+date: october 17th, 2013
+---
 
 Lorem ipsum dolor sit amet, consectetur ad<span>•</span>ipiscing elit. Integer nec o<span>•</span>dio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. 
 
