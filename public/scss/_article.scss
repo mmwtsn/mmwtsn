@@ -1,78 +1,29 @@
 .musing {
-
-  @include break(large) {
-    padding: 1.5rem 4rem;
-  }
-
-  @include break(med) {
-    padding: 4rem 1rem;
-  }
-
-  a {
-    display: inline-block;
-    padding: 0.2rem 0.3rem;
-  }
 }
 
 .meta {
-  background: $grey-dark;
-  margin: 0 0 5% 0;
+  margin: 0 0 2% 0;
   padding: 5% 0 2.5% 0;
 
   h1 {
     text-align: left;
     width: 100%;
-    line-height: 8rem;
+    font-size: 8rem;
+    line-height: 9rem;
     text-transform: uppercase;
-    font-size: 3.85rem;
     font-weight: 800;
     position: relative;
-    color: #fff;
-
-    @include break(x-large) {
-      font-size: 10.5rem;
-      line-height: 10.5rem;
-    }
-
-    @include break(large) {
-      font-size: 8rem;
-      line-height: 8rem;
-    }
-
-    @include break(med) {
-      font-size: 6rem;
-      line-height: 6rem;
-    }
-
-    @include break(sm) {
-      font-size: 5rem;
-      line-height: 5rem;
-      margin: 0.5rem 0;
-    }
+    margin: 0 0 2rem 0;
+    color: #222;
   }
 
   h2 {
     padding: 0 0 2rem 0;
     font-size: 2rem;
-    font-style: normal;
     font-weight: 600;
     text-transform: capitalize;
-    color: #888;
-
-    @include break(x-large) {
-      font-size: 3.5rem;
-    }
-    @include break(large) {
-      font-size: 3rem;
-    }
-    @include break(med) {
-      font-size: 2.5rem;
-    }
-    @include break(sm) {
-      font-size: 1.5rem;
-    }
+    color: #ccc;
   }
-
 }
 
 .content-width {
@@ -80,10 +31,8 @@
 
   p {
     color: #333;
-    margin: 0px auto;
-    padding: 1rem 0px;
-    width: 36rem;
-    text-align: justify;
+    margin: 0 auto;
+    padding: 1rem 0;
 
     @include break(x-large) {
       font-size: 1.2rem;

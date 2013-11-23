@@ -1,10 +1,9 @@
 footer {
   margin: 5% 0 0 0;
   padding: 1.5rem 2rem;
-  background: $grey-med;
 
   p {
-    color: #fff;
+    color: #aaa;
   }
 }
 
@@ -20,7 +19,8 @@ footer {
   height: 30px;
   display: block;
   position: relative;
-  background-image: url("/images/social-white.png");
+  background-image: url("/images/social-black.png");
+  opacity: 0.2; /* TODO - RE-CUT THIS SPRITE WITH THE CORRECT COLOR */
 }
 
 .icon-github {
