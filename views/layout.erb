@@ -17,10 +17,10 @@
         <a id="nav-toggle" class="toggle" href="#">&#9776;</a>
 
         <ul>
-          <li><a href="/">mmwtsn</a></li>
-          <li><a href="/words">words</a></li>
-          <li><a href="/work">work</a></li>
-          <li><a href="/about">about</a></li>
+          <li><a class="logotype" href="/">mmwtsn</a></li>
+          <li><a class="plain" href="/words">words</a></li>
+          <li><a class="plain" href="/work">work</a></li>
+          <li><a class="plain" href="/about">about</a></li>
         </ul>
       </nav>
     </header>
@@ -28,11 +28,9 @@
     <main class="chrome--main container" role="main">
       <section class="<%= @class %>">
 
-        <div class="meta" <%= header_image? %>>
+        <div class="meta" <%= header_image %>>
           <h1><%= @header %></h1>
           <h2><%= @sub_header %></h2>
-
-          <%# link? %>
         </div>
 
         <%= yield %>

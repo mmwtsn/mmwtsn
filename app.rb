@@ -17,34 +17,25 @@ end
 # Words (blog), Work (portfolio) and About (personal infomration)
 get '/words/?' do
   @title       = 'words'
-  @header     = 'Musings and Tutorials'
-  @sub_header = 'This title isn\'t built yet.'
-
-  @href       = ''
-  @text       = ''
+  @header      = 'Musings and Tutorials'
+  @sub_header  = 'This title isn\'t built yet.'
 
   erb :words
 end
 
 get '/work/?' do
-  @title       = 'work'
-  @header      = 'Recent Work'
-  @sub_header  = 'Design and web development samples'
-
-  @href        = 'mailto:hi@mmwtsn.com'
-  @text        = 'hire maxwell'
+  @title      = 'work'
+  @header     = 'Recent Work'
+  @sub_header = 'Design and web development samples'
 
   erb :work
 end
 
 get '/about/?' do
-  @title      = 'about'
-  @class      = @title
-  @header     = 'About Maxwell'
-  @sub_header = 'Full-stack web development and design'
-
-  @href       = 'mailto:hi@mmwtsn.com'
-  @text       = 'contact maxwell'
+  @title       = 'about'
+  @class       = @title
+  @header      = 'About Maxwell'
+  @sub_header  = 'Full-stack web development and design'
 
   erb :about
 end
@@ -53,12 +44,8 @@ end
 get '/*/?' do
   render_markdown
 
-  @title      = @header
-  @class      = 'musing'
-
-  #@href       = hn_link
-  @href       = '#' # TODO - BUILD THIS
-  @text       = 'discuss on hacker news'
+  @title    = @header
+  @class    = 'musing'
 
   erb :musing
 end

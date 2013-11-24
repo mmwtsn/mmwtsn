@@ -19,11 +19,11 @@ helpers do
     @content = RDiscount.new(body).to_html
   end
 
-  def header_image?
+  def header_image
     @header_image ? "style=\"background-image: #{ @header_image };\"" : '' 
   end
 
-  def link?
+  def link
     @text ? "<a href=\"#{ @href }\">#{ @text }</a>" : ''
   end
 
