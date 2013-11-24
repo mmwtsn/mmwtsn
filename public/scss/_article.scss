@@ -1,6 +1,9 @@
 .meta {
-  margin: 0 0 2% 0;
-  padding: 5% 0 2.5% 0;
+  margin: 6rem 0 0 0;
+
+  @include break(md) {
+    margin: 4rem 0 0 0;
+  }
 
   h1 {
     text-align: left;
@@ -12,6 +15,21 @@
     position: relative;
     margin: 0 0 2rem 0;
     color: #222;
+
+    @include break(lg) {
+      font-size: 7rem;
+      line-height: 8rem;
+    }
+
+    @include break(md) {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+
+    @include break(sm) {
+      font-size: 3.5rem;
+      line-height: 3.9375rem;
+    }
   }
 
   h2 {
@@ -20,6 +38,11 @@
     font-weight: 600;
     text-transform: capitalize;
     color: #ccc;
+
+    @include break(sm) {
+      font-size: 1.4rem;
+      padding: 0 0 1.5rem 0;
+    }
   }
 }
 
@@ -31,12 +54,9 @@
     margin: 0 auto;
     padding: 1rem 0;
 
-    @include break(x-large) {
-      font-size: 1.2rem;
-      max-width: 32rem;
-    }
     @include break(sm) {
       font-size: 1rem;
+      line-height: 2rem;
     }
   }
 }

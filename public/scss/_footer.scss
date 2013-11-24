@@ -1,18 +1,29 @@
 .chrome--footer {
-  margin: 5% auto;
+  margin: 2% auto;
   padding: 1.5rem 2rem;
   position: relative;
+  overflow: hidden;
+
+  @include break(sm) {
+    margin: 0 auto 5%;
+  }
 
   p {
-    color: #aaa;
+    color: #bbb;
+    font-weight: 500;
   }
 }
 
-.external {
+.external-link {
   margin: 0.7rem 1rem 0 0;
   position: absolute;
   top: 1rem;
   right: 0;
+
+  @include break(sm) {
+    margin: 1rem 0 0 0;
+    position: static;
+  }
 }
 
 .social {
@@ -22,6 +33,12 @@
   position: relative;
   background-image: url("/images/social-black.png");
   opacity: 0.2; /* TODO - RE-CUT THIS SPRITE WITH THE CORRECT COLOR */
+
+  @include break(sm) {
+    float: left;
+    position: static;
+    margin: 0 1rem 0 0;
+  }
 }
 
 .icon-github {

@@ -5,6 +5,10 @@ body {
   overflow-x: hidden;
 }
 
+html, body, aside {
+  height: 100%;
+}
+
 li {
   list-style: none;
 }
@@ -43,7 +47,7 @@ nav a {
 }
 
 body.ready {
-  .wrapper, .sidebar {
+  .container {
     transition: left ease 0.7s;
   }
 }

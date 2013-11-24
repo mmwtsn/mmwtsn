@@ -9,26 +9,26 @@ $grey-light: #666;
 $accent: #63baf9;
 
 $sm: 500px;
-$med: 600px;
-$large: 900px;
-$x-large: 1200px;
+$md: 600px;
+$lg: 800px;
+$xl: 1200px;
 
 // MIXINS
 @mixin break($point) {
-  @if $point == x-large {
-    @media (max-width: $x-large) {
+  @if $point == xl {
+    @media (max-width: $xl) {
       @content;
     }
   }
 
-  @if $point == large {
-    @media (max-width: $large) {
+  @if $point == lg {
+    @media (max-width: $lg) {
       @content;
     }
   }
 
-  @if $point == med {
-    @media (max-width: $med) {
+  @if $point == md {
+    @media (max-width: $md) {
       @content;
     }
   }
@@ -53,7 +53,14 @@ $x-large: 1200px;
 .container {
   margin: 0 auto;
   max-width: 40rem;
-  width: 100%;
+  width: 80%;
+}
+
+.chrome--main {
+
+  @include break(sm) {
+    margin: 3rem auto 0;
+  }
 }
 
 // PARTIALS

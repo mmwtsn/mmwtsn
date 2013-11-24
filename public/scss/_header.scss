@@ -1,50 +1,56 @@
-.chrome--nav {
-  overflow: hidden;
-  padding: 1.5rem 0;
+body.closed .chrome--header {
+  left: -200px;
 
-  li {
-    display: inline-block;
-    padding: 0 0 0 4rem;
-    float: left;
+  @include break(md) {
+    left: -236px;
   }
+}
 
-  li:first-child {
-    padding: 0 7rem 0 0.1rem;
+.chrome--header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+  background: #f8f8f8;
+  border-right: 1px solid darken(#f8f8f8, 10%);
+
+  @include break(md) {
+    width: 236px;
+    border: none;
   }
+}
+
+nav {
+  width: 50%;
+  margin: -20px auto 0;
 
   a.logotype {
-    font-family: Brannboll;
-    text-transform: lowercase;
     font-size: 1.5rem;
-    color: #8cbdd7;
-    font-weight: 100; 
+    font-family: Brannboll;
+    text-decoration: none;
+    color: $accent;
 
     &:hover {
-      color: lighten(#8cbdd7, 10%);
+      color: lighten($accent, 3%);
     }
   }
 
   a.plain {
-    font-size: 1.2rem;
+    color: #ccc;
     font-weight: 400;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #ddd;
-    text-align: center;
-
-    &:hover {
-      color: lighten(#bbb, 3%);
-    }
+    line-height: 2.5rem;
   }
 }
 
 a.toggle {
-  display: none;
   position: relative;
-  top: 34px;
-  left: 252px;
+  display: block;
+  top: 36px;
+  left: 165px;
+  font-size: 24px;
   line-height: 48px;
-  font-size: 32px;
   width: 48px;
   text-align: center;
   cursor: pointer;
@@ -52,19 +58,22 @@ a.toggle {
   background: transparent;
   cursor: pointer;
   z-index: 2;
+  color: #ccc;
 
-  @include break(small) {
+  @include break(sm) {
     display: block;
   }
 
-  @include break(med) {
-    padding: 0 0 0 1rem;
-    left: 220px;
-    font-size: 1.5rem;
+  @include break(md) {
+    padding: 0 0 0 0.8rem;
+    left: 175px;
+    font-size: 1.4rem;
     width: 99rem;
     text-align: left;
     botder-bottom: 1px solid #eee;
     background: rgba(248, 248, 248, 0.8);
+    top: 20px;
+    line-height: 40px;
   }
 }
 
