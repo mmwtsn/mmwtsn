@@ -2,7 +2,7 @@ body.closed .chrome--header {
   left: -200px;
 
   @include break(md) {
-    left: -236px;
+    left: -144px;
   }
 }
 
@@ -17,14 +17,19 @@ body.closed .chrome--header {
   border-right: 1px solid darken(#f8f8f8, 10%);
 
   @include break(md) {
-    width: 236px;
+    width: 144px;
     border: none;
+    background: #222;
   }
 }
 
 nav {
   width: 50%;
   margin: -20px auto 0;
+
+  @include break(md) {
+    width: 66%;
+  }
 
   a.logotype {
     font-size: 1.5rem;
@@ -66,7 +71,7 @@ a.toggle {
 
   @include break(md) {
     padding: 0 0 0 0.8rem;
-    left: 175px;
+    left: 120px;
     font-size: 1.4rem;
     width: 99rem;
     text-align: left;
