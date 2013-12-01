@@ -19,15 +19,6 @@ helpers do
     @content = RDiscount.new(body).to_html
   end
 
-  # TODO def pin_open
-  # helper to allow users
-  # to keep sidebar toggled
-  # while viewing the site
-
-  def header_image
-    @header_image ? "style=\"background-image: #{ @header_image };\"" : '' 
-  end
-
   def link
     @text ? "<a href=\"#{ @href }\">#{ @text }</a>" : ''
   end
