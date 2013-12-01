@@ -1,5 +1,5 @@
 .meta {
-  margin: 6rem 0 0 0;
+  margin: 6rem 0 3rem 0;
 
   @include break(md) {
     margin: 4rem 0 0 0;
@@ -80,5 +80,38 @@
 
   img {
     width: 200px;
+  }
+}
+
+// TODO - NEW FILE
+.words {
+
+  .musing {
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-bottom: 1px dotted #ddd;
+    padding: 1rem;
+
+    &:hover {
+      background: #fafafa;
+    }
+
+    &:active {
+      background: #f4f4f4;
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  .date {
+    display: block;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
   }
 }
