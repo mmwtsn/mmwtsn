@@ -2,16 +2,17 @@
 require 'bundler'
 Bundler.require
 
-# Load helper files
-require './httpauth'
+# Load helper methods
 require './helpers'
-
-# Use default ERB layout wrapper for all markdown files
-set :markdown, :layout_engine => :erb, :layout => :layout
 
 # Index
 get '/?' do
-  redirect '/musings/first'
+  redirect '/words'
+end
+
+# Portfolio page
+get '/work/?' do
+  erb :work
 end
 
 # Words (blog), Work (portfolio) and About (personal infomration)
@@ -20,19 +21,10 @@ get '/words/?' do
   erb :words
 end
 
-get '/work/?' do
-  @title      = 'work'
-  erb :work
-end
-
-get '/about/?' do
-  erb :about
-end
-
 # Markdown routes
 get '/*/?' do
   render_markdown
-  erb :musing
+  erb :post
 end
 
 # 404

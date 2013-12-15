@@ -3,6 +3,9 @@ helpers do
     halt 404 unless File.exists? file
   end
 
+  # TODO - Fix the current metadata struture;
+  # "date" shouldn't be used for all h2 content areas
+
   def render_markdown
     request = params[:splat][0]
 
