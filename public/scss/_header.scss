@@ -1,4 +1,4 @@
-body.closed .chrome--header {
+body.closed .header {
   left: -200px;
 
   @include break(md) {
@@ -6,7 +6,8 @@ body.closed .chrome--header {
   }
 }
 
-.chrome--header {
+// Global header element
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -23,7 +24,8 @@ body.closed .chrome--header {
   }
 }
 
-nav {
+// Site navigation within header region
+.nav {
   width: 50%;
   margin: -20px auto 0;
 
@@ -31,6 +33,7 @@ nav {
     width: 66%;
   }
 
+  // "mmwtsn" logotype
   a.logotype {
     font-size: 1.5rem;
     font-family: Brannboll;
@@ -42,6 +45,7 @@ nav {
     }
   }
 
+  // Plain text navigation links
   a.plain {
     color: #ccc;
     font-weight: 400;
@@ -49,7 +53,8 @@ nav {
   }
 }
 
-.toggle {
+// Button that toggles header visibility
+button.toggle {
   position: relative;
   display: block;
   top: 36px;

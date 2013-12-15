@@ -1,8 +1,10 @@
+// Work sample wrapper
 .work-sample {
   overflow: hidden;
   margin: 0 0 3rem 0;
 
-  figure {
+  // Work image wrapper
+  figure.thumbnail {
     width: 100%;
     max-width: 350px;
     padding: 0px;

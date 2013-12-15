@@ -1,3 +1,4 @@
+// Base Styles
 body {
   font-family: Gotham, sans-serif;
   font-size: 16px;
@@ -64,3 +65,17 @@ strong {
 i {
   font-style: italic;
 }
+
+// Layout
+.container {
+  margin: 0 auto;
+  max-width: 32rem;
+  width: 80%;
+}
+
+.main {
+  @include break(sm) {
+    margin: 3rem auto 0;
+  }
+}
+

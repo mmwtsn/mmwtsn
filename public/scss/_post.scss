@@ -1,3 +1,4 @@
+// Title, subtitle, date elements
 .meta {
   margin: 6rem 0 3rem 0;
 
@@ -5,6 +6,7 @@
     margin: 4rem 0 0 0;
   }
 
+  // Huge primary title
   h1 {
     text-align: left;
     width: 100%;
@@ -22,6 +24,7 @@
     }
   }
 
+  // Smaller subtitle or date
   h2 {
     padding: 0 0 2rem 0;
     font-size: 1.91rem;
@@ -36,11 +39,12 @@
   }
 }
 
+// Wraps width of page content
 .content-width {
   overflow: hidden;
 
   p {
-    color: #333;
+    color: #333; // TODO - move to variable
     margin: 0 auto;
     padding: 1rem 0;
 
@@ -51,57 +55,3 @@
   }
 }
 
-.left-col {
-  float: left;
-  width: 30%;
-}
-
-.main-col {
-  float: left;
-  with: 60%;
-}
-
-.external-links {
-  width: auto;
-  font-size: 1em;
-}
-
-.content-image {
-
-  img {
-    width: 200px;
-  }
-}
-
-// TODO - NEW FILE
-.words {
-
-  .musing {
-    display: block;
-    font-size: 1.5rem;
-    text-decoration: none;
-    border-bottom: 1px dotted #ddd;
-    padding: 1rem;
-
-    &:hover {
-      background: #fafafa;
-    }
-
-    &:active {
-      background: #f4f4f4;
-    }
-  }
-
-  .title {
-    font-weight: 600;
-    text-transform: capitalize;
-  }
-
-  .date {
-    display: block;
-    color: #ccc;
-    font-size: 1rem;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-}

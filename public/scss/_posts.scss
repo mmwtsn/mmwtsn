@@ -1,0 +1,36 @@
+// Table of contents view styles
+.posts {
+
+  // Individual post wrapper
+  .post {
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-bottom: 1px dotted #ddd;
+    padding: 1rem;
+
+    &:hover {
+      background: #fafafa;
+    }
+
+    &:active {
+      background: #f4f4f4;
+    }
+  }
+
+  // Post title
+  .title {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  // Post date
+  .date {
+    display: block;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+

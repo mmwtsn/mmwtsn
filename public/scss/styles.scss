@@ -1,73 +1,19 @@
-// HELPER LIBRARIES
+// Helper files & libraries
 @import "compass/css3";
 @import "compass/reset";
 
-// VARIABLES
-$grey-dark: #111;
-$grey-med: #333;
-$grey-light: #666;
-$accent: #63baf9;
-
-$sm: 500px;
-$md: 600px;
-$lg: 800px;
-$xl: 1200px;
-
-// MIXINS
-@mixin break($point) {
-  @if $point == xl {
-    @media (max-width: $xl) {
-      @content;
-    }
-  }
-
-  @if $point == lg {
-    @media (max-width: $lg) {
-      @content;
-    }
-  }
-
-  @if $point == md {
-    @media (max-width: $md) {
-      @content;
-    }
-  }
-
-  @if $point == sm {
-    @media (max-width: $sm) {
-      @content;
-    }
-  }
-}
-
-@function em-calc($target) {
-  @return $target / 16 * 1rem;
-}
-
-// TYPOGRAPHY
-@font-face {
-    font-family: "Brannboll";
-    src: url("/fonts/brannboll.otf");
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 32rem;
-  width: 80%;
-}
-
-.chrome--main {
-
-  @include break(sm) {
-    margin: 3rem auto 0;
-  }
-}
-
-// PARTIALS
+// Helpers & base element styles
+@import "variables";
+@import "mixins";
+@import "typography";
 @import "base";
+
+// Page sections
 @import "header";
 @import "footer";
 
-// PAGES
-@import "article";
+// Pages
+@import "post";
+@import "posts";
 @import "work";
+
