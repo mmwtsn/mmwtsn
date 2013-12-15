@@ -8,23 +8,13 @@
   h1 {
     text-align: left;
     width: 100%;
-    font-size: 8rem;
-    line-height: 9rem;
+    font-size: 5rem;
+    line-height: 7rem;
     text-transform: uppercase;
     font-weight: 800;
     position: relative;
     margin: 0 0 2rem 0;
     color: #222;
-
-    @include break(lg) {
-      font-size: 7rem;
-      line-height: 8rem;
-    }
-
-    @include break(md) {
-      font-size: 5rem;
-      line-height: 6rem;
-    }
 
     @include break(sm) {
       font-size: 3.5rem;
@@ -34,7 +24,7 @@
 
   h2 {
     padding: 0 0 2rem 0;
-    font-size: 2rem;
+    font-size: 1.91rem;
     font-weight: 600;
     text-transform: capitalize;
     color: #ccc;

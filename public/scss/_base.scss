@@ -53,7 +53,14 @@ body.ready {
 }
 
 p, a {
-  font-size: 1.2rem;
-  line-height: 2.2rem;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
+strong {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}
