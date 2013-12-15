@@ -1,6 +1,8 @@
 <div class="inner-wrapper words">
-  <h1>words</h1>
-  <h2>Collected blog posts, thoughts and tutorials</h2>
+  <div class="meta">
+    <h1>musings</h1>
+    <h2>on code, coffee &amp; design</h2>
+  </div>
   <% @musings.each_index do |i| %>
     <a class="musing" href="<%= @musings[i][:post_url] %>">
       <span class="title"><%= @musings[i][:post_title] %></span>
