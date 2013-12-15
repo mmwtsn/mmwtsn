@@ -4,7 +4,7 @@ require_relative '../app'
 set :environment, :test
 
 def app
-	Sinatra::Application
+  Sinatra::Application
 end
 
 RSpec.configure do |conf|

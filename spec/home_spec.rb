@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe 'When the home page is requested' do
-	it 'it should return "Morning."' do
-		get '/'
-    last_response.should be_ok
-		last_response.should match(/Morning/)
-	end
+  it 'it should load successfully' do
+    get '/'
+    last_response.status.should == 302
+  end
 end
 
 describe 'Markdown routes' do
@@ -22,7 +21,6 @@ end
 describe 'Unmatched routes' do
   it 'should return 404' do
     get '/typo'
-#last_response.code.should == 404
     last_response.status.should == 404
   end
 end
