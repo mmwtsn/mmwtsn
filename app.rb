@@ -29,11 +29,13 @@ end
 
 # 404
 not_found do
-  not_found
+  status 400
+  erb 404.to_s.to_sym
 end
 
 # 500
 error do
-  error
+  status 500
+  erb 500.to_s.to_sym
 end
 
