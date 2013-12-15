@@ -3,9 +3,6 @@ helpers do
     halt 404 unless File.exists? file
   end
 
-  # TODO - Fix the current metadata struture;
-  # "date" shouldn't be used for all h2 content areas
-
   def render_markdown
     request = params[:splat][0]
 
@@ -16,8 +13,15 @@ helpers do
     meta = YAML.load(post)
     body = post.split("---")[2]
 
-    @header        = meta["title"]
-    @sub_header    = meta["date"]
+    # Set title value
+    @title = meta["title"]
+
+    # Set subtitle value to either date or subtitle
+    if meta["date"]
+      @subtitle = meta["date"]
+    elsif meta["subtitle"]
+      @subtitle = meta["subtitle"]
+    end
 
     @content = RDiscount.new(body).to_html
   end
@@ -26,7 +30,7 @@ helpers do
     @text ? "<a href=\"#{ @href }\">#{ @text }</a>" : ''
   end
 
-  def parse_file (target, *args)
+  def parse_post (target)
     metadata = YAML.load(IO.read(target))
 
     # Build the post URL from the filename
@@ -58,16 +62,8 @@ helpers do
     posts = Dir.glob(File.join("views/musings", "*.md"))
 
     posts.each do |post|
-      parse_file post, "title", "subtitle"
+      parse_post post
     end
-  end
-
-  def not_found
-    erb 404.to_s.to_sym
-  end
-
-  def error
-    erb 500.to_s.to_sym
   end
 end
 

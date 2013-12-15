@@ -3,6 +3,26 @@
   <head>
     <title>mmwtsn » <%= @title %></title>
 
+    <!--
+
+      $$\   $$\           $$\ $$\               
+      $$ |  $$ |          $$ |$$ |              
+      $$ |  $$ | $$$$$$\  $$ |$$ | $$$$$$\      
+      $$$$$$$$ |$$  __$$\ $$ |$$ |$$  __$$\     
+      $$  __$$ |$$$$$$$$ |$$ |$$ |$$ /  $$ |    
+      $$ |  $$ |$$   ____|$$ |$$ |$$ |  $$ |    
+      $$ |  $$ |\$$$$$$$\ $$ |$$ |\$$$$$$  |$$\ 
+      \__|  \__| \_______|\__|\__| \______/ \__|
+
+      This markup isn't very interesting.
+
+      If you want to see the full source for
+      this website, check it out on GitHub:
+      
+      https://github.com/mmwtsn/mmwtsn
+
+    -->
+
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
@@ -26,9 +46,7 @@
     </header>
 
     <main class="main container" role="main">
-      <section class="<%= @class %>">
-        <%= yield %>
-      </section>
+      <%= yield %>
     </main>
 
     <footer class="footer container">
