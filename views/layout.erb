@@ -12,8 +12,8 @@
   </head>
 
   <body class="closed">
-    <header class="chrome--header container">
-      <nav class="chrome--nav" role="navigation">
+    <header class="header container">
+      <nav class="nav" role="navigation">
         <button id="nav-toggle" class="toggle" href="#">&#9776;</button>
 
         <ul>
@@ -25,18 +25,18 @@
       </nav>
     </header>
 
-    <main class="chrome--main container" role="main">
+    <main class="main container" role="main">
       <section class="<%= @class %>">
         <%= yield %>
       </section>
     </main>
 
-    <footer class="chrome--footer container">
+    <footer class="footer container">
       <p>&copy; m. maxwell watson <%= DateTime.now.year %></p>
 
-      <li class="external-link"><a class="social icon-github" href="https://github.com/mmwtsn"></a></li>
-      <li class="external-link"><a class="social icon-twitter" href="https://twitter.com/mmwtsn"></a></li>
-      <li class="external-link"><a class="social icon-linkedin" href="https://www.linkedin.com/in/mmwtsn"></a></li>
+      <li class="external-link"><a class="social github" href="https://github.com/mmwtsn"></a></li>
+      <li class="external-link"><a class="social twitter" href="https://twitter.com/mmwtsn"></a></li>
+      <li class="external-link"><a class="social linkedin" href="https://www.linkedin.com/in/mmwtsn"></a></li>
     </footer>
 
     <script src="/js/script.js" type="text/javascript"></script>
