@@ -3,10 +3,10 @@
     <h1>musings</h1>
     <h2>on code, coffee &amp; design</h2>
   </div>
-  <% @musings.each_index do |i| %>
-    <a class="musing" href="<%= @musings[i][:post_url] %>">
-      <span class="title"><%= @musings[i][:post_title] %></span>
-      <time class="date" datetime="<%= @musings[i][:numerical_date] %>"><%= @musings[i][:english_date] %></time>
+  <% @posts.each_index do |i| %>
+    <a class="musing" href="<%= @posts[i][:post_url] %>">
+      <span class="title"><%= @posts[i][:post_title] %></span>
+      <time class="date" datetime="<%= @posts[i][:numerical_date] %>"><%= @posts[i][:english_date] %></time>
     </a>
   <% end %>
 </div>

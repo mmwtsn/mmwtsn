@@ -26,50 +26,39 @@ helpers do
     @text ? "<a href=\"#{ @href }\">#{ @text }</a>" : ''
   end
 
-  # TODO - "Post" is the conventional term for all blog writing;
-  # replace "musing" for "post" across the site to increase
-  # the code's readability
-
   def parse_file (target, *args)
     metadata = YAML.load(IO.read(target))
 
     # Build the post URL from the filename
     # by removing the filepath and file type
-    url = target + "/"
+    url = target
     url.slice! "views"
     url.slice! ".md"
 
     # Create a new Date object to manipulate
     d = Date.parse(metadata["date"])
 
-    # Format the datetime from the date
-    numerical_date = d.strftime("%D")
-    english_date   = d.strftime("%B %-d, %Y")
-    date_object    = d
-
-    # Ensure @musings is defined, otherwise create a new array
-    @musings = @musings || []
+    # Ensure @posts is defined, otherwise create a new array
+    @posts = @posts || []
 
     # Add current post to the unsorted array of posts as a hash
-    @musings.unshift({
-      :numerical_date => numerical_date,   # Used by datetime attribute of the HTML5 <time> element
-      :english_date   => english_date,     # Readable date printed on the page
-      :date_object    => date_object,      # Ruby Date object used for sorting the @musings array
+    @posts.unshift({
+      :numerical_date => d.strftime("%D"),           # Used by datetime attribute of the HTML5 <time> element
+      :english_date   => d.strftime("%B %-d, %Y"),   # Readable date printed on the page
+      :date_object    => d,                          # Ruby Date object used for sorting the @posts array
       :post_title     => metadata["title"],
       :post_url       => url
     })
 
     # Sort each post by date to build a chronological list of posts
-    @musings.sort_by {|musing| musing[:date_object]}
+    @posts.sort_by {|post| post[:date_object]}
   end
 
   def table_of_contents
-    musings = File.join("views/musings", "*.md")
+    posts = Dir.glob(File.join("views/musings", "*.md"))
 
-    all_musings = Dir.glob(musings)
-
-    all_musings.each do |musing|
-      parse_file musing, "title", "date"
+    posts.each do |post|
+      parse_file post, "title", "subtitle"
     end
   end
 
